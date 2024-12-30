@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.13.3">
+<meta name="crystal_docs.project_version" content="0.1.0">
+<meta name="crystal_docs.project_name" content="openrouter">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="openrouter">
+  <title>OpenRouter::Model - openrouter 0.1.0</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          openrouter
+        </a>
+      </h1>
+
+      <span class="project-version">
+        0.1.0
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="openrouter/OpenRouter" data-name="openrouter">
+      <a href="../OpenRouter.html">OpenRouter</a>
+      
+        <ul>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ApiError" data-name="openrouter::apierror">
+      <a href="../OpenRouter/ApiError.html">ApiError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/BadGatewayError" data-name="openrouter::badgatewayerror">
+      <a href="../OpenRouter/BadGatewayError.html">BadGatewayError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/BadRequestError" data-name="openrouter::badrequesterror">
+      <a href="../OpenRouter/BadRequestError.html">BadRequestError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Choice" data-name="openrouter::choice">
+      <a href="../OpenRouter/Choice.html">Choice</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Client" data-name="openrouter::client">
+      <a href="../OpenRouter/Client.html">Client</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/CompletionRequest" data-name="openrouter::completionrequest">
+      <a href="../OpenRouter/CompletionRequest.html">CompletionRequest</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Error" data-name="openrouter::error">
+      <a href="../OpenRouter/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ForbiddenError" data-name="openrouter::forbiddenerror">
+      <a href="../OpenRouter/ForbiddenError.html">ForbiddenError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/FunctionDescription" data-name="openrouter::functiondescription">
+      <a href="../OpenRouter/FunctionDescription.html">FunctionDescription</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Message" data-name="openrouter::message">
+      <a href="../OpenRouter/Message.html">Message</a>
+      
+    </li>
+  
+  <li class=" current" data-id="openrouter/OpenRouter/Model" data-name="openrouter::model">
+      <a href="../OpenRouter/Model.html">Model</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/NonChatChoice" data-name="openrouter::nonchatchoice">
+      <a href="../OpenRouter/NonChatChoice.html">NonChatChoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/NonStreamingChoice" data-name="openrouter::nonstreamingchoice">
+      <a href="../OpenRouter/NonStreamingChoice.html">NonStreamingChoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/PaymentRequiredError" data-name="openrouter::paymentrequirederror">
+      <a href="../OpenRouter/PaymentRequiredError.html">PaymentRequiredError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/RequestTimeoutError" data-name="openrouter::requesttimeouterror">
+      <a href="../OpenRouter/RequestTimeoutError.html">RequestTimeoutError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Response" data-name="openrouter::response">
+      <a href="../OpenRouter/Response.html">Response</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ResponseObject" data-name="openrouter::responseobject">
+      <a href="../OpenRouter/ResponseObject.html">ResponseObject</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Role" data-name="openrouter::role">
+      <a href="../OpenRouter/Role.html">Role</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ServiceUnavailableError" data-name="openrouter::serviceunavailableerror">
+      <a href="../OpenRouter/ServiceUnavailableError.html">ServiceUnavailableError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/StreamingChoice" data-name="openrouter::streamingchoice">
+      <a href="../OpenRouter/StreamingChoice.html">StreamingChoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Tool" data-name="openrouter::tool">
+      <a href="../OpenRouter/Tool.html">Tool</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ToolCall" data-name="openrouter::toolcall">
+      <a href="../OpenRouter/ToolCall.html">ToolCall</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/TooManyRequestsError" data-name="openrouter::toomanyrequestserror">
+      <a href="../OpenRouter/TooManyRequestsError.html">TooManyRequestsError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/UnauthorizedError" data-name="openrouter::unauthorizederror">
+      <a href="../OpenRouter/UnauthorizedError.html">UnauthorizedError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Usage" data-name="openrouter::usage">
+      <a href="../OpenRouter/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">struct</span> OpenRouter::<wbr>Model
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/Model.html">OpenRouter::Model</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Represents a language model retrieved from the OpenRouter API via the <code>/models</code> endpoint</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L4" target="_blank">
+        openrouter/types/model.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28json%3AJSON%3A%3AAny%29-class-method" class="signature"><strong>.new</strong>(json : JSON::Any)</a>
+        
+          <div class="summary"><p>Creates a new Model object from a JSON response from the OpenRouter API.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#architecture_instruct_type%3AString%7CNil-instance-method" class="signature"><strong>#architecture_instruct_type</strong> : String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#architecture_modality%3AString-instance-method" class="signature"><strong>#architecture_modality</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#architecture_tokenizer%3AString-instance-method" class="signature"><strong>#architecture_tokenizer</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#context_length%3AInt32-instance-method" class="signature"><strong>#context_length</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#created%3AInt32-instance-method" class="signature"><strong>#created</strong> : Int32</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#description%3AString-instance-method" class="signature"><strong>#description</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#id%3AString-instance-method" class="signature"><strong>#id</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#per_request_limits_completion_tokens%3AInt32%3F-instance-method" class="signature"><strong>#per_request_limits_completion_tokens</strong> : Int32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#per_request_limits_prompt_tokens%3AInt32%3F-instance-method" class="signature"><strong>#per_request_limits_prompt_tokens</strong> : Int32?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pricing_completion%3AString-instance-method" class="signature"><strong>#pricing_completion</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pricing_image%3AString-instance-method" class="signature"><strong>#pricing_image</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pricing_prompt%3AString-instance-method" class="signature"><strong>#pricing_prompt</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pricing_request%3AString-instance-method" class="signature"><strong>#pricing_request</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s-instance-method" class="signature"><strong>#to_s</strong></a>
+        
+          <div class="summary"><p>Returns a nicely readable and concise string representation of this object, typically intended for users.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#top_provider_context_length%3AInt32%7CNil-instance-method" class="signature"><strong>#top_provider_context_length</strong> : Int32 | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#top_provider_is_moderated%3ABool-instance-method" class="signature"><strong>#top_provider_is_moderated</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#top_provider_max_completion_tokens%3AInt32%7CNil-instance-method" class="signature"><strong>#top_provider_max_completion_tokens</strong> : Int32 | Nil</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(json:JSON::Any)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(json : JSON::Any)
+
+        <a class="method-permalink" href="#new%28json%3AJSON%3A%3AAny%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Creates a new Model object from a JSON response from the OpenRouter API.</p>
+<p>The JSON response from the OpenRouter API should be formatted as follows:</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: &quot;string&quot;,
+    &quot;name&quot;: &quot;string&quot;,
+    &quot;created&quot;: 0,
+    &quot;description&quot;: &quot;string&quot;,
+    &quot;pricing&quot;: {
+      &quot;prompt&quot;: &quot;string&quot;,
+      &quot;completion&quot;: &quot;string&quot;,
+      &quot;request&quot;: &quot;string&quot;,
+      &quot;image&quot;: &quot;string&quot;
+    },
+    &quot;context_length&quot;: 0,
+    &quot;architecture&quot;: {
+      &quot;tokenizer&quot;: &quot;Router&quot;,
+      &quot;instruct_type&quot;: &quot;none&quot;,
+      &quot;modality&quot;: &quot;text-&gt;text&quot;
+    },
+    &quot;top_provider&quot;: {
+      &quot;context_length&quot;: 0,
+      &quot;max_completion_tokens&quot;: 0,
+      &quot;is_moderated&quot;: true
+    },
+    &quot;per_request_limits&quot;: {
+      &quot;prompt_tokens&quot;: null,
+      &quot;completion_tokens&quot;: null
+    }
+}</code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L70" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="architecture_instruct_type:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>architecture_instruct_type</strong> : String | Nil
+
+        <a class="method-permalink" href="#architecture_instruct_type%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="architecture_modality:String-instance-method">
+      <div class="signature">
+        
+        def <strong>architecture_modality</strong> : String
+
+        <a class="method-permalink" href="#architecture_modality%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L22" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="architecture_tokenizer:String-instance-method">
+      <div class="signature">
+        
+        def <strong>architecture_tokenizer</strong> : String
+
+        <a class="method-permalink" href="#architecture_tokenizer%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="context_length:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>context_length</strong> : Int32
+
+        <a class="method-permalink" href="#context_length%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="created:Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>created</strong> : Int32
+
+        <a class="method-permalink" href="#created%3AInt32-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="description:String-instance-method">
+      <div class="signature">
+        
+        def <strong>description</strong> : String
+
+        <a class="method-permalink" href="#description%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="id:String-instance-method">
+      <div class="signature">
+        
+        def <strong>id</strong> : String
+
+        <a class="method-permalink" href="#id%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="name:String-instance-method">
+      <div class="signature">
+        
+        def <strong>name</strong> : String
+
+        <a class="method-permalink" href="#name%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="per_request_limits_completion_tokens:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>per_request_limits_completion_tokens</strong> : Int32?
+
+        <a class="method-permalink" href="#per_request_limits_completion_tokens%3AInt32%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="per_request_limits_prompt_tokens:Int32?-instance-method">
+      <div class="signature">
+        
+        def <strong>per_request_limits_prompt_tokens</strong> : Int32?
+
+        <a class="method-permalink" href="#per_request_limits_prompt_tokens%3AInt32%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pricing_completion:String-instance-method">
+      <div class="signature">
+        
+        def <strong>pricing_completion</strong> : String
+
+        <a class="method-permalink" href="#pricing_completion%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pricing_image:String-instance-method">
+      <div class="signature">
+        
+        def <strong>pricing_image</strong> : String
+
+        <a class="method-permalink" href="#pricing_image%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pricing_prompt:String-instance-method">
+      <div class="signature">
+        
+        def <strong>pricing_prompt</strong> : String
+
+        <a class="method-permalink" href="#pricing_prompt%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pricing_request:String-instance-method">
+      <div class="signature">
+        
+        def <strong>pricing_request</strong> : String
+
+        <a class="method-permalink" href="#pricing_request%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>
+
+        <a class="method-permalink" href="#to_s-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Object
+            </div>
+          
+          <p>Returns a nicely readable and concise string representation of this object,
+typically intended for users.</p>
+<p>This method should usually <strong>not</strong> be overridden. It delegates to
+<code>#to_s(IO)</code> which can be overridden for custom implementations.</p>
+<p>Also see <code>#inspect</code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L114" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="top_provider_context_length:Int32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>top_provider_context_length</strong> : Int32 | Nil
+
+        <a class="method-permalink" href="#top_provider_context_length%3AInt32%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L25" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="top_provider_is_moderated:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>top_provider_is_moderated</strong> : Bool
+
+        <a class="method-permalink" href="#top_provider_is_moderated%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="top_provider_max_completion_tokens:Int32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>top_provider_max_completion_tokens</strong> : Int32 | Nil
+
+        <a class="method-permalink" href="#top_provider_max_completion_tokens%3AInt32%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/model.cr#L28" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>

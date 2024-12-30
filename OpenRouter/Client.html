@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.13.3">
+<meta name="crystal_docs.project_version" content="0.1.0">
+<meta name="crystal_docs.project_name" content="openrouter">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="openrouter">
+  <title>OpenRouter::Client - openrouter 0.1.0</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          openrouter
+        </a>
+      </h1>
+
+      <span class="project-version">
+        0.1.0
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="openrouter/OpenRouter" data-name="openrouter">
+      <a href="../OpenRouter.html">OpenRouter</a>
+      
+        <ul>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ApiError" data-name="openrouter::apierror">
+      <a href="../OpenRouter/ApiError.html">ApiError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/BadGatewayError" data-name="openrouter::badgatewayerror">
+      <a href="../OpenRouter/BadGatewayError.html">BadGatewayError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/BadRequestError" data-name="openrouter::badrequesterror">
+      <a href="../OpenRouter/BadRequestError.html">BadRequestError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Choice" data-name="openrouter::choice">
+      <a href="../OpenRouter/Choice.html">Choice</a>
+      
+    </li>
+  
+  <li class=" current" data-id="openrouter/OpenRouter/Client" data-name="openrouter::client">
+      <a href="../OpenRouter/Client.html">Client</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/CompletionRequest" data-name="openrouter::completionrequest">
+      <a href="../OpenRouter/CompletionRequest.html">CompletionRequest</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Error" data-name="openrouter::error">
+      <a href="../OpenRouter/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ForbiddenError" data-name="openrouter::forbiddenerror">
+      <a href="../OpenRouter/ForbiddenError.html">ForbiddenError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/FunctionDescription" data-name="openrouter::functiondescription">
+      <a href="../OpenRouter/FunctionDescription.html">FunctionDescription</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Message" data-name="openrouter::message">
+      <a href="../OpenRouter/Message.html">Message</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Model" data-name="openrouter::model">
+      <a href="../OpenRouter/Model.html">Model</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/NonChatChoice" data-name="openrouter::nonchatchoice">
+      <a href="../OpenRouter/NonChatChoice.html">NonChatChoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/NonStreamingChoice" data-name="openrouter::nonstreamingchoice">
+      <a href="../OpenRouter/NonStreamingChoice.html">NonStreamingChoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/PaymentRequiredError" data-name="openrouter::paymentrequirederror">
+      <a href="../OpenRouter/PaymentRequiredError.html">PaymentRequiredError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/RequestTimeoutError" data-name="openrouter::requesttimeouterror">
+      <a href="../OpenRouter/RequestTimeoutError.html">RequestTimeoutError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Response" data-name="openrouter::response">
+      <a href="../OpenRouter/Response.html">Response</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ResponseObject" data-name="openrouter::responseobject">
+      <a href="../OpenRouter/ResponseObject.html">ResponseObject</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Role" data-name="openrouter::role">
+      <a href="../OpenRouter/Role.html">Role</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ServiceUnavailableError" data-name="openrouter::serviceunavailableerror">
+      <a href="../OpenRouter/ServiceUnavailableError.html">ServiceUnavailableError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/StreamingChoice" data-name="openrouter::streamingchoice">
+      <a href="../OpenRouter/StreamingChoice.html">StreamingChoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Tool" data-name="openrouter::tool">
+      <a href="../OpenRouter/Tool.html">Tool</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ToolCall" data-name="openrouter::toolcall">
+      <a href="../OpenRouter/ToolCall.html">ToolCall</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/TooManyRequestsError" data-name="openrouter::toomanyrequestserror">
+      <a href="../OpenRouter/TooManyRequestsError.html">TooManyRequestsError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/UnauthorizedError" data-name="openrouter::unauthorizederror">
+      <a href="../OpenRouter/UnauthorizedError.html">UnauthorizedError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Usage" data-name="openrouter::usage">
+      <a href="../OpenRouter/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> OpenRouter::<wbr>Client
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/Client.html">OpenRouter::Client</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Client for the OpenRouter API</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/client.cr#L9" target="_blank">
+        openrouter/client.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="BASE_URL">
+        <strong>BASE_URL</strong> = <code><span class="s">&quot;https://openrouter.ai/api/v1&quot;</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28api_key%3AString%2Capp_name%3AString%7CNil%3Dnil%2Capp_url%3AString%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(api_key : String, app_name : String | Nil = <span class="n">nil</span>, app_url : String | Nil = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Initialize a new OpenRouter::Client</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#api_key%3AString-instance-method" class="signature"><strong>#api_key</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#api_key%3D%28api_key%3AString%29-instance-method" class="signature"><strong>#api_key=</strong>(api_key : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#app_name%3AString%7CNil-instance-method" class="signature"><strong>#app_name</strong> : String | Nil</a>
+        
+          <div class="summary"><p>It tells OpenRouter which app is using the API see #app_url</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#app_name%3D%28app_name%3AString%7CNil%29-instance-method" class="signature"><strong>#app_name=</strong>(app_name : String | Nil)</a>
+        
+          <div class="summary"><p>It tells OpenRouter which app is using the API see #app_url</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#app_url%3AString%7CNil-instance-method" class="signature"><strong>#app_url</strong> : String | Nil</a>
+        
+          <div class="summary"><p>Together with #app_name it tells OpenRouter which app is using the API</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#app_url%3D%28app_url%3AString%7CNil%29-instance-method" class="signature"><strong>#app_url=</strong>(app_url : String | Nil)</a>
+        
+          <div class="summary"><p>Together with #app_name it tells OpenRouter which app is using the API</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#complete%28prompt%3AString%2Cmodel%3AString%29%3AResponse-instance-method" class="signature"><strong>#complete</strong>(prompt : String, model : String) : Response</a>
+        
+          <div class="summary"><p>Send a completion request for a text prompt using the specified model</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#complete%28request%3ACompletionRequest%29%3AResponse-instance-method" class="signature"><strong>#complete</strong>(request : CompletionRequest) : Response</a>
+        
+          <div class="summary"><p>Send a completion request using the specified CompletionRequest object</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get%28endpoint%3AString%29%3AJSON%3A%3AAny-instance-method" class="signature"><strong>#get</strong>(endpoint : String) : JSON::Any</a>
+        
+          <div class="summary"><p>Get a specific endpoint</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_models%3AArray%28Model%29-instance-method" class="signature"><strong>#get_models</strong> : Array(Model)</a>
+        
+          <div class="summary"><p>Returns an array of Model structs representing the available models currently supported by OpenRouter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#post%28endpoint%3AString%2Cbody%3AString%7CNil%29%3AJSON%3A%3AAny-instance-method" class="signature"><strong>#post</strong>(endpoint : String, body : String | Nil) : JSON::Any</a>
+        
+          <div class="summary"><p>Post to a specific endpoint</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(api_key:String,app_name:String|Nil=nil,app_url:String|Nil=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(api_key : String, app_name : String | Nil = <span class="n">nil</span>, app_url : String | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28api_key%3AString%2Capp_name%3AString%7CNil%3Dnil%2Capp_url%3AString%7CNil%3Dnil%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Initialize a new OpenRouter::Client</p>
+<p>The <em>api_key</em> is generally required to use the API (though an invalid key seems to allow querying for models.)
+<em>app_name</em> and <em>app_url</em> are optional and tell OpenRouter about your application.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/client.cr#L25" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="api_key:String-instance-method">
+      <div class="signature">
+        
+        def <strong>api_key</strong> : String
+
+        <a class="method-permalink" href="#api_key%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/client.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="api_key=(api_key:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>api_key=</strong>(api_key : String)
+
+        <a class="method-permalink" href="#api_key%3D%28api_key%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/client.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="app_name:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>app_name</strong> : String | Nil
+
+        <a class="method-permalink" href="#app_name%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>It tells OpenRouter which app is using the API
+see #app_url</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/client.cr#L16" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="app_name=(app_name:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>app_name=</strong>(app_name : String | Nil)
+
+        <a class="method-permalink" href="#app_name%3D%28app_name%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>It tells OpenRouter which app is using the API
+see #app_url</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/client.cr#L16" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="app_url:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>app_url</strong> : String | Nil
+
+        <a class="method-permalink" href="#app_url%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Together with #app_name it tells OpenRouter which app is using the API</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/client.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="app_url=(app_url:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>app_url=</strong>(app_url : String | Nil)
+
+        <a class="method-permalink" href="#app_url%3D%28app_url%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Together with #app_name it tells OpenRouter which app is using the API</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/client.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="complete(prompt:String,model:String):Response-instance-method">
+      <div class="signature">
+        
+        def <strong>complete</strong>(prompt : String, model : String) : <a href="../OpenRouter/Response.html">Response</a>
+
+        <a class="method-permalink" href="#complete%28prompt%3AString%2Cmodel%3AString%29%3AResponse-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Send a completion request for a text prompt using the specified model</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/client.cr#L44" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="complete(request:CompletionRequest):Response-instance-method">
+      <div class="signature">
+        
+        def <strong>complete</strong>(request : <a href="../OpenRouter/CompletionRequest.html">CompletionRequest</a>) : <a href="../OpenRouter/Response.html">Response</a>
+
+        <a class="method-permalink" href="#complete%28request%3ACompletionRequest%29%3AResponse-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Send a completion request using the specified CompletionRequest object</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/client.cr#L51" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get(endpoint:String):JSON::Any-instance-method">
+      <div class="signature">
+        
+        def <strong>get</strong>(endpoint : String) : JSON::Any
+
+        <a class="method-permalink" href="#get%28endpoint%3AString%29%3AJSON%3A%3AAny-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get a specific endpoint</p>
+<p>This is a low-level method that is available for edge cases.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/client.cr#L59" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_models:Array(Model)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_models</strong> : Array(<a href="../OpenRouter/Model.html">Model</a>)
+
+        <a class="method-permalink" href="#get_models%3AArray%28Model%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns an array of Model structs representing the available models currently supported by OpenRouter</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/client.cr#L32" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="post(endpoint:String,body:String|Nil):JSON::Any-instance-method">
+      <div class="signature">
+        
+        def <strong>post</strong>(endpoint : String, body : String | Nil) : JSON::Any
+
+        <a class="method-permalink" href="#post%28endpoint%3AString%2Cbody%3AString%7CNil%29%3AJSON%3A%3AAny-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Post to a specific endpoint</p>
+<p>This is a low-level method that is available for edge cases.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/client.cr#L66" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>

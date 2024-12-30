@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.13.3">
+<meta name="crystal_docs.project_version" content="0.1.0">
+<meta name="crystal_docs.project_name" content="openrouter">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="openrouter">
+  <title>OpenRouter::CompletionRequest - openrouter 0.1.0</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          openrouter
+        </a>
+      </h1>
+
+      <span class="project-version">
+        0.1.0
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="openrouter/OpenRouter" data-name="openrouter">
+      <a href="../OpenRouter.html">OpenRouter</a>
+      
+        <ul>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ApiError" data-name="openrouter::apierror">
+      <a href="../OpenRouter/ApiError.html">ApiError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/BadGatewayError" data-name="openrouter::badgatewayerror">
+      <a href="../OpenRouter/BadGatewayError.html">BadGatewayError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/BadRequestError" data-name="openrouter::badrequesterror">
+      <a href="../OpenRouter/BadRequestError.html">BadRequestError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Choice" data-name="openrouter::choice">
+      <a href="../OpenRouter/Choice.html">Choice</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Client" data-name="openrouter::client">
+      <a href="../OpenRouter/Client.html">Client</a>
+      
+    </li>
+  
+  <li class=" current" data-id="openrouter/OpenRouter/CompletionRequest" data-name="openrouter::completionrequest">
+      <a href="../OpenRouter/CompletionRequest.html">CompletionRequest</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Error" data-name="openrouter::error">
+      <a href="../OpenRouter/Error.html">Error</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ForbiddenError" data-name="openrouter::forbiddenerror">
+      <a href="../OpenRouter/ForbiddenError.html">ForbiddenError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/FunctionDescription" data-name="openrouter::functiondescription">
+      <a href="../OpenRouter/FunctionDescription.html">FunctionDescription</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Message" data-name="openrouter::message">
+      <a href="../OpenRouter/Message.html">Message</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Model" data-name="openrouter::model">
+      <a href="../OpenRouter/Model.html">Model</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/NonChatChoice" data-name="openrouter::nonchatchoice">
+      <a href="../OpenRouter/NonChatChoice.html">NonChatChoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/NonStreamingChoice" data-name="openrouter::nonstreamingchoice">
+      <a href="../OpenRouter/NonStreamingChoice.html">NonStreamingChoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/PaymentRequiredError" data-name="openrouter::paymentrequirederror">
+      <a href="../OpenRouter/PaymentRequiredError.html">PaymentRequiredError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/RequestTimeoutError" data-name="openrouter::requesttimeouterror">
+      <a href="../OpenRouter/RequestTimeoutError.html">RequestTimeoutError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Response" data-name="openrouter::response">
+      <a href="../OpenRouter/Response.html">Response</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ResponseObject" data-name="openrouter::responseobject">
+      <a href="../OpenRouter/ResponseObject.html">ResponseObject</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Role" data-name="openrouter::role">
+      <a href="../OpenRouter/Role.html">Role</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ServiceUnavailableError" data-name="openrouter::serviceunavailableerror">
+      <a href="../OpenRouter/ServiceUnavailableError.html">ServiceUnavailableError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/StreamingChoice" data-name="openrouter::streamingchoice">
+      <a href="../OpenRouter/StreamingChoice.html">StreamingChoice</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Tool" data-name="openrouter::tool">
+      <a href="../OpenRouter/Tool.html">Tool</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ToolCall" data-name="openrouter::toolcall">
+      <a href="../OpenRouter/ToolCall.html">ToolCall</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/TooManyRequestsError" data-name="openrouter::toomanyrequestserror">
+      <a href="../OpenRouter/TooManyRequestsError.html">TooManyRequestsError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/UnauthorizedError" data-name="openrouter::unauthorizederror">
+      <a href="../OpenRouter/UnauthorizedError.html">UnauthorizedError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Usage" data-name="openrouter::usage">
+      <a href="../OpenRouter/Usage.html">Usage</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> OpenRouter::<wbr>CompletionRequest
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/CompletionRequest.html">OpenRouter::CompletionRequest</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L3" target="_blank">
+        openrouter/types/completion_request.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28messages%3AArray%28Message%29%2Cmodel%3AString%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(messages : Array(Message), model : String | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28prompt%3AString%2Cmodel%3AString%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(prompt : String, model : String | Nil = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#frequency_penalty%3AFloat32%7CNil-instance-method" class="signature"><strong>#frequency_penalty</strong> : Float32 | Nil</a>
+        
+          <div class="summary"><p>Range: (-2, 2)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#frequency_penalty%3D%28frequency_penalty%3AFloat32%7CNil%29-instance-method" class="signature"><strong>#frequency_penalty=</strong>(frequency_penalty : Float32 | Nil)</a>
+        
+          <div class="summary"><p>Range: (-2, 2)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#logit_bias_key%3AFloat32%7CNil-instance-method" class="signature"><strong>#logit_bias_key</strong> : Float32 | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#logit_bias_key%3D%28logit_bias_key%3AFloat32%7CNil%29-instance-method" class="signature"><strong>#logit_bias_key=</strong>(logit_bias_key : Float32 | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#logit_bias_value%3AFloat32%7CNil-instance-method" class="signature"><strong>#logit_bias_value</strong> : Float32 | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#logit_bias_value%3D%28logit_bias_value%3AFloat32%7CNil%29-instance-method" class="signature"><strong>#logit_bias_value=</strong>(logit_bias_value : Float32 | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_tokens%3AInt32%7CNil-instance-method" class="signature"><strong>#max_tokens</strong> : Int32 | Nil</a>
+        
+          <div class="summary"><p>See LLM Parameters (openrouter.ai/docs/parameters)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#max_tokens%3D%28max_tokens%3AInt32%7CNil%29-instance-method" class="signature"><strong>#max_tokens=</strong>(max_tokens : Int32 | Nil)</a>
+        
+          <div class="summary"><p>See LLM Parameters (openrouter.ai/docs/parameters)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#messages%3AArray%28Message%29%7CNil-instance-method" class="signature"><strong>#messages</strong> : Array(Message) | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#messages%3D%28messages%3AArray%28Message%29%7CNil%29-instance-method" class="signature"><strong>#messages=</strong>(messages : Array(Message) | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#min_p%3AFloat32%7CNil-instance-method" class="signature"><strong>#min_p</strong> : Float32 | Nil</a>
+        
+          <div class="summary"><p>Range: [0, 1]</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#min_p%3D%28min_p%3AFloat32%7CNil%29-instance-method" class="signature"><strong>#min_p=</strong>(min_p : Float32 | Nil)</a>
+        
+          <div class="summary"><p>Range: [0, 1]</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#model%3AString%7CNil-instance-method" class="signature"><strong>#model</strong> : String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#model%3D%28model%3AString%7CNil%29-instance-method" class="signature"><strong>#model=</strong>(model : String | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#models%3AArray%28String%29%7CNil-instance-method" class="signature"><strong>#models</strong> : Array(String) | Nil</a>
+        
+          <div class="summary"><p>for models and route, See &quot;Model Routing&quot; section at openrouter.ai/docs/model-routing</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#models%3D%28models%3AArray%28String%29%7CNil%29-instance-method" class="signature"><strong>#models=</strong>(models : Array(String) | Nil)</a>
+        
+          <div class="summary"><p>for models and route, See &quot;Model Routing&quot; section at openrouter.ai/docs/model-routing</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#presence_penalty%3AFloat32%7CNil-instance-method" class="signature"><strong>#presence_penalty</strong> : Float32 | Nil</a>
+        
+          <div class="summary"><p>Range: (-2, 2)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#presence_penalty%3D%28presence_penalty%3AFloat32%7CNil%29-instance-method" class="signature"><strong>#presence_penalty=</strong>(presence_penalty : Float32 | Nil)</a>
+        
+          <div class="summary"><p>Range: (-2, 2)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#prompt%3AString%7CNil-instance-method" class="signature"><strong>#prompt</strong> : String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#prompt%3D%28prompt%3AString%7CNil%29-instance-method" class="signature"><strong>#prompt=</strong>(prompt : String | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#provider%3AString%7CNil-instance-method" class="signature"><strong>#provider</strong> : String | Nil</a>
+        
+          <div class="summary"><p>See &quot;Provider Routing&quot; section: openrouter.ai/docs/provider-routing</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#provider%3D%28provider%3AString%7CNil%29-instance-method" class="signature"><strong>#provider=</strong>(provider : String | Nil)</a>
+        
+          <div class="summary"><p>See &quot;Provider Routing&quot; section: openrouter.ai/docs/provider-routing</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#repetition_penalty%3AFloat32%7CNil-instance-method" class="signature"><strong>#repetition_penalty</strong> : Float32 | Nil</a>
+        
+          <div class="summary"><p>Range: (0, 29)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#repetition_penalty%3D%28repetition_penalty%3AFloat32%7CNil%29-instance-method" class="signature"><strong>#repetition_penalty=</strong>(repetition_penalty : Float32 | Nil)</a>
+        
+          <div class="summary"><p>Range: (0, 29)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#route%3AString%7CNil-instance-method" class="signature"><strong>#route</strong> : String | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#route%3D%28route%3AString%7CNil%29-instance-method" class="signature"><strong>#route=</strong>(route : String | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#seed%3AInt32%7CNil-instance-method" class="signature"><strong>#seed</strong> : Int32 | Nil</a>
+        
+          <div class="summary"><h3><a id="advanced-optional-parameters" class="anchor" href="#advanced-optional-parameters">  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Advanced optional parameters</h3></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#seed%3D%28seed%3AInt32%7CNil%29-instance-method" class="signature"><strong>#seed=</strong>(seed : Int32 | Nil)</a>
+        
+          <div class="summary"><h3><a id="advanced-optional-parameters" class="anchor" href="#advanced-optional-parameters">  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Advanced optional parameters</h3></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#stop%3AString%7CArray%28String%29%7CNil-instance-method" class="signature"><strong>#stop</strong> : String | Array(String) | Nil</a>
+        
+          <div class="summary"><p>the stop tokens</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#stop%3D%28stop%3AString%7CArray%28String%29%7CNil%29-instance-method" class="signature"><strong>#stop=</strong>(stop : String | Array(String) | Nil)</a>
+        
+          <div class="summary"><p>the stop tokens</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#stream%3ABool-instance-method" class="signature"><strong>#stream</strong> : Bool</a>
+        
+          <div class="summary"><p>whether to stream the response</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#stream%3D%28stream%3ABool%29-instance-method" class="signature"><strong>#stream=</strong>(stream : Bool)</a>
+        
+          <div class="summary"><p>whether to stream the response</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#temperature%3AFloat32%7CNil-instance-method" class="signature"><strong>#temperature</strong> : Float32 | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#temperature%3D%28temperature%3AFloat32%7CNil%29-instance-method" class="signature"><strong>#temperature=</strong>(temperature : Float32 | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_json%28io%3AIO%29-instance-method" class="signature"><strong>#to_json</strong>(io : IO)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tools%3AArray%28Tool%29-instance-method" class="signature"><strong>#tools</strong> : Array(Tool)</a>
+        
+          <div class="summary"><p>Tool calling Will be passed down as-is for providers implementing OpenAI's interface.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#tools%3D%28tools%3AArray%28Tool%29%29-instance-method" class="signature"><strong>#tools=</strong>(tools : Array(Tool))</a>
+        
+          <div class="summary"><p>Tool calling Will be passed down as-is for providers implementing OpenAI's interface.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#top_a%3AFloat32%7CNil-instance-method" class="signature"><strong>#top_a</strong> : Float32 | Nil</a>
+        
+          <div class="summary"><p>Range: [0, 1]</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#top_a%3D%28top_a%3AFloat32%7CNil%29-instance-method" class="signature"><strong>#top_a=</strong>(top_a : Float32 | Nil)</a>
+        
+          <div class="summary"><p>Range: [0, 1]</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#top_k%3AFloat32%7CNil-instance-method" class="signature"><strong>#top_k</strong> : Float32 | Nil</a>
+        
+          <div class="summary"><p>Range: (1, Infinity) Not available for OpenAI models</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#top_k%3D%28top_k%3AFloat32%7CNil%29-instance-method" class="signature"><strong>#top_k=</strong>(top_k : Float32 | Nil)</a>
+        
+          <div class="summary"><p>Range: (1, Infinity) Not available for OpenAI models</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#top_logprobs%3AInt32%7CNil-instance-method" class="signature"><strong>#top_logprobs</strong> : Int32 | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#top_logprobs%3D%28top_logprobs%3AInt32%7CNil%29-instance-method" class="signature"><strong>#top_logprobs=</strong>(top_logprobs : Int32 | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#top_p%3AFloat32%7CNil-instance-method" class="signature"><strong>#top_p</strong> : Float32 | Nil</a>
+        
+          <div class="summary"><p>Range: (0, 1)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#top_p%3D%28top_p%3AFloat32%7CNil%29-instance-method" class="signature"><strong>#top_p=</strong>(top_p : Float32 | Nil)</a>
+        
+          <div class="summary"><p>Range: (0, 1)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#transforms%3AArray%28String%29%7CNil-instance-method" class="signature"><strong>#transforms</strong> : Array(String) | Nil</a>
+        
+          <div class="summary"><p>Reduce latency by providing the model with a predicted output https://platform.openai.com/docs/guides/latency-optimization#use-predicted-outputs prediction?: { type: 'content'; content: string; }; ### OpenRouter-only parameters ##### provider?: ProviderPreferences; // See &quot;Prompt Transforms&quot; section at openrouter.ai/docs/transforms</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#transforms%3D%28transforms%3AArray%28String%29%7CNil%29-instance-method" class="signature"><strong>#transforms=</strong>(transforms : Array(String) | Nil)</a>
+        
+          <div class="summary"><p>Reduce latency by providing the model with a predicted output https://platform.openai.com/docs/guides/latency-optimization#use-predicted-outputs prediction?: { type: 'content'; content: string; }; ### OpenRouter-only parameters ##### provider?: ProviderPreferences; // See &quot;Prompt Transforms&quot; section at openrouter.ai/docs/transforms</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(messages:Array(Message),model:String|Nil=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(messages : Array(<a href="../OpenRouter/Message.html">Message</a>), model : String | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28messages%3AArray%28Message%29%2Cmodel%3AString%7CNil%3Dnil%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L82" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(prompt:String,model:String|Nil=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(prompt : String, model : String | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28prompt%3AString%2Cmodel%3AString%7CNil%3Dnil%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L77" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="frequency_penalty:Float32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>frequency_penalty</strong> : Float32 | Nil
+
+        <a class="method-permalink" href="#frequency_penalty%3AFloat32%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: (-2, 2)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L39" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="frequency_penalty=(frequency_penalty:Float32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>frequency_penalty=</strong>(frequency_penalty : Float32 | Nil)
+
+        <a class="method-permalink" href="#frequency_penalty%3D%28frequency_penalty%3AFloat32%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: (-2, 2)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L39" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="logit_bias_key:Float32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>logit_bias_key</strong> : Float32 | Nil
+
+        <a class="method-permalink" href="#logit_bias_key%3AFloat32%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L48" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="logit_bias_key=(logit_bias_key:Float32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>logit_bias_key=</strong>(logit_bias_key : Float32 | Nil)
+
+        <a class="method-permalink" href="#logit_bias_key%3D%28logit_bias_key%3AFloat32%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L48" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="logit_bias_value:Float32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>logit_bias_value</strong> : Float32 | Nil
+
+        <a class="method-permalink" href="#logit_bias_value%3AFloat32%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L49" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="logit_bias_value=(logit_bias_value:Float32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>logit_bias_value=</strong>(logit_bias_value : Float32 | Nil)
+
+        <a class="method-permalink" href="#logit_bias_value%3D%28logit_bias_value%3AFloat32%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L49" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_tokens:Int32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>max_tokens</strong> : Int32 | Nil
+
+        <a class="method-permalink" href="#max_tokens%3AInt32%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>See LLM Parameters (openrouter.ai/docs/parameters)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="max_tokens=(max_tokens:Int32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>max_tokens=</strong>(max_tokens : Int32 | Nil)
+
+        <a class="method-permalink" href="#max_tokens%3D%28max_tokens%3AInt32%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>See LLM Parameters (openrouter.ai/docs/parameters)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="messages:Array(Message)|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>messages</strong> : Array(<a href="../OpenRouter/Message.html">Message</a>) | Nil
+
+        <a class="method-permalink" href="#messages%3AArray%28Message%29%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L4" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="messages=(messages:Array(Message)|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>messages=</strong>(messages : Array(<a href="../OpenRouter/Message.html">Message</a>) | Nil)
+
+        <a class="method-permalink" href="#messages%3D%28messages%3AArray%28Message%29%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L4" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="min_p:Float32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>min_p</strong> : Float32 | Nil
+
+        <a class="method-permalink" href="#min_p%3AFloat32%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: [0, 1]</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L54" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="min_p=(min_p:Float32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>min_p=</strong>(min_p : Float32 | Nil)
+
+        <a class="method-permalink" href="#min_p%3D%28min_p%3AFloat32%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: [0, 1]</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L54" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="model:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>model</strong> : String | Nil
+
+        <a class="method-permalink" href="#model%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="model=(model:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>model=</strong>(model : String | Nil)
+
+        <a class="method-permalink" href="#model%3D%28model%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="models:Array(String)|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>models</strong> : Array(String) | Nil
+
+        <a class="method-permalink" href="#models%3AArray%28String%29%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>for models and route, See &quot;Model Routing&quot; section at openrouter.ai/docs/model-routing</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L71" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="models=(models:Array(String)|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>models=</strong>(models : Array(String) | Nil)
+
+        <a class="method-permalink" href="#models%3D%28models%3AArray%28String%29%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>for models and route, See &quot;Model Routing&quot; section at openrouter.ai/docs/model-routing</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L71" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="presence_penalty:Float32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>presence_penalty</strong> : Float32 | Nil
+
+        <a class="method-permalink" href="#presence_penalty%3AFloat32%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: (-2, 2)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L42" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="presence_penalty=(presence_penalty:Float32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>presence_penalty=</strong>(presence_penalty : Float32 | Nil)
+
+        <a class="method-permalink" href="#presence_penalty%3D%28presence_penalty%3AFloat32%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: (-2, 2)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L42" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="prompt:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>prompt</strong> : String | Nil
+
+        <a class="method-permalink" href="#prompt%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="prompt=(prompt:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>prompt=</strong>(prompt : String | Nil)
+
+        <a class="method-permalink" href="#prompt%3D%28prompt%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="provider:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>provider</strong> : String | Nil
+
+        <a class="method-permalink" href="#provider%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>See &quot;Provider Routing&quot; section: openrouter.ai/docs/provider-routing</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L75" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="provider=(provider:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>provider=</strong>(provider : String | Nil)
+
+        <a class="method-permalink" href="#provider%3D%28provider%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>See &quot;Provider Routing&quot; section: openrouter.ai/docs/provider-routing</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L75" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="repetition_penalty:Float32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>repetition_penalty</strong> : Float32 | Nil
+
+        <a class="method-permalink" href="#repetition_penalty%3AFloat32%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: (0, 29)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L45" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="repetition_penalty=(repetition_penalty:Float32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>repetition_penalty=</strong>(repetition_penalty : Float32 | Nil)
+
+        <a class="method-permalink" href="#repetition_penalty%3D%28repetition_penalty%3AFloat32%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: (0, 29)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L45" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="route:String|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>route</strong> : String | Nil
+
+        <a class="method-permalink" href="#route%3AString%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L72" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="route=(route:String|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>route=</strong>(route : String | Nil)
+
+        <a class="method-permalink" href="#route%3D%28route%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L72" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="seed:Int32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>seed</strong> : Int32 | Nil
+
+        <a class="method-permalink" href="#seed%3AInt32%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <h3><a id="advanced-optional-parameters" class="anchor" href="#advanced-optional-parameters">  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Advanced optional parameters</h3>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="seed=(seed:Int32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>seed=</strong>(seed : Int32 | Nil)
+
+        <a class="method-permalink" href="#seed%3D%28seed%3AInt32%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <h3><a id="advanced-optional-parameters" class="anchor" href="#advanced-optional-parameters">  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Advanced optional parameters</h3>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="stop:String|Array(String)|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>stop</strong> : String | Array(String) | Nil
+
+        <a class="method-permalink" href="#stop%3AString%7CArray%28String%29%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>the stop tokens</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="stop=(stop:String|Array(String)|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>stop=</strong>(stop : String | Array(String) | Nil)
+
+        <a class="method-permalink" href="#stop%3D%28stop%3AString%7CArray%28String%29%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>the stop tokens</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="stream:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>stream</strong> : Bool
+
+        <a class="method-permalink" href="#stream%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>whether to stream the response</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="stream=(stream:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>stream=</strong>(stream : Bool)
+
+        <a class="method-permalink" href="#stream%3D%28stream%3ABool%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>whether to stream the response</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="temperature:Float32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>temperature</strong> : Float32 | Nil
+
+        <a class="method-permalink" href="#temperature%3AFloat32%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="temperature=(temperature:Float32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>temperature=</strong>(temperature : Float32 | Nil)
+
+        <a class="method-permalink" href="#temperature%3D%28temperature%3AFloat32%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_json(io:IO)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_json</strong>(io : IO)
+
+        <a class="method-permalink" href="#to_json%28io%3AIO%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L87" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_json(json:JSON::Builder)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_json</strong>(json : JSON::Builder)
+
+        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L93" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tools:Array(Tool)-instance-method">
+      <div class="signature">
+        
+        def <strong>tools</strong> : Array(<a href="../OpenRouter/Tool.html">Tool</a>)
+
+        <a class="method-permalink" href="#tools%3AArray%28Tool%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Tool calling
+Will be passed down as-is for providers implementing OpenAI's interface.
+For providers with custom interfaces, we transform and map the properties.
+Otherwise, we transform the tools into a YAML template. The model responds with an assistant message.
+See models supporting tool calling: openrouter.ai/models?supported_parameters=tools</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L26" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="tools=(tools:Array(Tool))-instance-method">
+      <div class="signature">
+        
+        def <strong>tools=</strong>(tools : Array(<a href="../OpenRouter/Tool.html">Tool</a>))
+
+        <a class="method-permalink" href="#tools%3D%28tools%3AArray%28Tool%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Tool calling
+Will be passed down as-is for providers implementing OpenAI's interface.
+For providers with custom interfaces, we transform and map the properties.
+Otherwise, we transform the tools into a YAML template. The model responds with an assistant message.
+See models supporting tool calling: openrouter.ai/models?supported_parameters=tools</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L26" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="top_a:Float32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>top_a</strong> : Float32 | Nil
+
+        <a class="method-permalink" href="#top_a%3AFloat32%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: [0, 1]</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="top_a=(top_a:Float32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>top_a=</strong>(top_a : Float32 | Nil)
+
+        <a class="method-permalink" href="#top_a%3D%28top_a%3AFloat32%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: [0, 1]</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="top_k:Float32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>top_k</strong> : Float32 | Nil
+
+        <a class="method-permalink" href="#top_k%3AFloat32%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: (1, Infinity) Not available for OpenAI models</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="top_k=(top_k:Float32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>top_k=</strong>(top_k : Float32 | Nil)
+
+        <a class="method-permalink" href="#top_k%3D%28top_k%3AFloat32%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: (1, Infinity) Not available for OpenAI models</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="top_logprobs:Int32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>top_logprobs</strong> : Int32 | Nil
+
+        <a class="method-permalink" href="#top_logprobs%3AInt32%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L51" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="top_logprobs=(top_logprobs:Int32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>top_logprobs=</strong>(top_logprobs : Int32 | Nil)
+
+        <a class="method-permalink" href="#top_logprobs%3D%28top_logprobs%3AInt32%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L51" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="top_p:Float32|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>top_p</strong> : Float32 | Nil
+
+        <a class="method-permalink" href="#top_p%3AFloat32%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: (0, 1)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="top_p=(top_p:Float32|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>top_p=</strong>(top_p : Float32 | Nil)
+
+        <a class="method-permalink" href="#top_p%3D%28top_p%3AFloat32%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Range: (0, 1)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="transforms:Array(String)|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>transforms</strong> : Array(String) | Nil
+
+        <a class="method-permalink" href="#transforms%3AArray%28String%29%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Reduce latency by providing the model with a predicted output
+https://platform.openai.com/docs/guides/latency-optimization#use-predicted-outputs
+prediction?: { type: 'content'; content: string; };</p>
+<h3><a id="open-router-only-parameters" class="anchor" href="#open-router-only-parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>OpenRouter-only parameters</h3>
+<p>provider?: ProviderPreferences;
+// See &quot;Prompt Transforms&quot; section at openrouter.ai/docs/transforms</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="transforms=(transforms:Array(String)|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>transforms=</strong>(transforms : Array(String) | Nil)
+
+        <a class="method-permalink" href="#transforms%3D%28transforms%3AArray%28String%29%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Reduce latency by providing the model with a predicted output
+https://platform.openai.com/docs/guides/latency-optimization#use-predicted-outputs
+prediction?: { type: 'content'; content: string; };</p>
+<h3><a id="open-router-only-parameters" class="anchor" href="#open-router-only-parameters">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>OpenRouter-only parameters</h3>
+<p>provider?: ProviderPreferences;
+// See &quot;Prompt Transforms&quot; section at openrouter.ai/docs/transforms</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L68" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>
