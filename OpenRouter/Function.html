@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="openrouter">
-  <title>OpenRouter::Usage - openrouter 0.12.0-dev</title>
+  <title>OpenRouter::Function - openrouter 0.12.0-dev</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -112,7 +112,7 @@
       
     </li>
   
-  <li class=" " data-id="openrouter/OpenRouter/Function" data-name="openrouter::function">
+  <li class=" current" data-id="openrouter/OpenRouter/Function" data-name="openrouter::function">
       <a href="../OpenRouter/Function.html">Function</a>
       
     </li>
@@ -212,7 +212,7 @@
       
     </li>
   
-  <li class=" current" data-id="openrouter/OpenRouter/Usage" data-name="openrouter::usage">
+  <li class=" " data-id="openrouter/OpenRouter/Usage" data-name="openrouter::usage">
       <a href="../OpenRouter/Usage.html">Usage</a>
       
     </li>
@@ -232,13 +232,13 @@
 <h1 class="type-name">
 
   <span class="kind">
-    struct
-  </span> OpenRouter::<wbr>Usage
+    class
+  </span> OpenRouter::<wbr>Function
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/Usage.html">OpenRouter::Usage</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/Function.html">OpenRouter::Function</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
@@ -268,7 +268,7 @@
   </h2>
   
     
-      openrouter/types/response.cr
+      openrouter/types/tool.cr
     
     <br/>
   
@@ -289,7 +289,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28json%3AJSON%3A%3AAny%29-class-method" class="signature"><strong>.new</strong>(json : JSON::Any)</a>
+        <a href="#new%28name%3AString%2Cdescription%3AString%7CNil%3Dnil%2Cparameters%3AArray%28FunctionParameter%29%3D%5B%5DofFunctionParameter%29-class-method" class="signature"><strong>.new</strong>(name : String, description : String | Nil = <span class="n">nil</span>, parameters : Array(FunctionParameter) = <span class="o">[]</span> <span class="k">of</span> <span class="t">FunctionParameter</span>)</a>
         
       </li>
     
@@ -312,12 +312,32 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#completion%3AInt32-instance-method" class="signature"><strong>#completion</strong> : Int32</a>
+        <a href="#description%3AString%7CNil-instance-method" class="signature"><strong>#description</strong> : String | Nil</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#prompt%3AInt32-instance-method" class="signature"><strong>#prompt</strong> : Int32</a>
+        <a href="#description%3D%28description%3AString%7CNil%29-instance-method" class="signature"><strong>#description=</strong>(description : String | Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#name%3D%28name%3AString%29-instance-method" class="signature"><strong>#name=</strong>(name : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parameters%3AArray%28FunctionParameter%29-instance-method" class="signature"><strong>#parameters</strong> : Array(FunctionParameter)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parameters%3D%28parameters%3AArray%28FunctionParameter%29%29-instance-method" class="signature"><strong>#parameters=</strong>(parameters : Array(FunctionParameter))</a>
         
       </li>
     
@@ -331,29 +351,11 @@
         
       </li>
     
-      <li class="entry-summary">
-        <a href="#total%3AInt32-instance-method" class="signature"><strong>#total</strong> : Int32</a>
-        
-      </li>
-    
   </ul>
 
 
 
   <div class="methods-inherited">
-    
-      
-
-
-      
-
-
-      
-
-
-      
-
-
     
       
 
@@ -393,12 +395,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(json:JSON::Any)-class-method">
+    <div class="entry-detail" id="new(name:String,description:String|Nil=nil,parameters:Array(FunctionParameter)=[]ofFunctionParameter)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(json : JSON::Any)
+        def self.<strong>new</strong>(name : String, description : String | Nil = <span class="n">nil</span>, parameters : Array(<a href="../OpenRouter/FunctionParameter.html">FunctionParameter</a>) = <span class="o">[]</span> <span class="k">of</span> <span class="t">FunctionParameter</span>)
 
-        <a class="method-permalink" href="#new%28json%3AJSON%3A%3AAny%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28name%3AString%2Cdescription%3AString%7CNil%3Dnil%2Cparameters%3AArray%28FunctionParameter%29%3D%5B%5DofFunctionParameter%29-class-method">#</a>
       </div>
       
       <br/>
@@ -423,12 +425,12 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="completion:Int32-instance-method">
+    <div class="entry-detail" id="description:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>completion</strong> : Int32
+        def <strong>description</strong> : String | Nil
 
-        <a class="method-permalink" href="#completion%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#description%3AString%7CNil-instance-method">#</a>
       </div>
       
       <br/>
@@ -437,12 +439,68 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="prompt:Int32-instance-method">
+    <div class="entry-detail" id="description=(description:String|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>prompt</strong> : Int32
+        def <strong>description=</strong>(description : String | Nil)
 
-        <a class="method-permalink" href="#prompt%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#description%3D%28description%3AString%7CNil%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="name:String-instance-method">
+      <div class="signature">
+        
+        def <strong>name</strong> : String
+
+        <a class="method-permalink" href="#name%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="name=(name:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>name=</strong>(name : String)
+
+        <a class="method-permalink" href="#name%3D%28name%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parameters:Array(FunctionParameter)-instance-method">
+      <div class="signature">
+        
+        def <strong>parameters</strong> : Array(<a href="../OpenRouter/FunctionParameter.html">FunctionParameter</a>)
+
+        <a class="method-permalink" href="#parameters%3AArray%28FunctionParameter%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parameters=(parameters:Array(FunctionParameter))-instance-method">
+      <div class="signature">
+        
+        def <strong>parameters=</strong>(parameters : Array(<a href="../OpenRouter/FunctionParameter.html">FunctionParameter</a>))
+
+        <a class="method-permalink" href="#parameters%3D%28parameters%3AArray%28FunctionParameter%29%29-instance-method">#</a>
       </div>
       
       <br/>
@@ -471,20 +529,6 @@
         def <strong>to_json</strong>(json : JSON::Builder)
 
         <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="total:Int32-instance-method">
-      <div class="signature">
-        
-        def <strong>total</strong> : Int32
-
-        <a class="method-permalink" href="#total%3AInt32-instance-method">#</a>
       </div>
       
       <br/>

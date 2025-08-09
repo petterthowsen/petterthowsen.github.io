@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.13.3">
-<meta name="crystal_docs.project_version" content="0.1.0">
+<meta name="generator" content="Crystal Docs 1.15.1">
+<meta name="crystal_docs.project_version" content="0.12.0-dev">
 <meta name="crystal_docs.project_name" content="openrouter">
 
 
@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="openrouter">
-  <title>OpenRouter::Role - openrouter 0.1.0</title>
+  <title>OpenRouter::Role - openrouter 0.12.0-dev</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -45,7 +45,7 @@
       </h1>
 
       <span class="project-version">
-        0.1.0
+        0.12.0-dev
       </span>
     </div>
   </div>
@@ -92,6 +92,16 @@
       
     </li>
   
+  <li class=" " data-id="openrouter/OpenRouter/Content" data-name="openrouter::content">
+      <a href="../OpenRouter/Content.html">Content</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ContentPart" data-name="openrouter::contentpart">
+      <a href="../OpenRouter/ContentPart.html">ContentPart</a>
+      
+    </li>
+  
   <li class=" " data-id="openrouter/OpenRouter/Error" data-name="openrouter::error">
       <a href="../OpenRouter/Error.html">Error</a>
       
@@ -102,8 +112,18 @@
       
     </li>
   
-  <li class=" " data-id="openrouter/OpenRouter/FunctionDescription" data-name="openrouter::functiondescription">
-      <a href="../OpenRouter/FunctionDescription.html">FunctionDescription</a>
+  <li class=" " data-id="openrouter/OpenRouter/Function" data-name="openrouter::function">
+      <a href="../OpenRouter/Function.html">Function</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/FunctionParameter" data-name="openrouter::functionparameter">
+      <a href="../OpenRouter/FunctionParameter.html">FunctionParameter</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/InvalidJSONResponse" data-name="openrouter::invalidjsonresponse">
+      <a href="../OpenRouter/InvalidJSONResponse.html">InvalidJSONResponse</a>
       
     </li>
   
@@ -129,6 +149,11 @@
   
   <li class=" " data-id="openrouter/OpenRouter/PaymentRequiredError" data-name="openrouter::paymentrequirederror">
       <a href="../OpenRouter/PaymentRequiredError.html">PaymentRequiredError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Reasoning" data-name="openrouter::reasoning">
+      <a href="../OpenRouter/Reasoning.html">Reasoning</a>
       
     </li>
   
@@ -172,6 +197,11 @@
       
     </li>
   
+  <li class=" " data-id="openrouter/OpenRouter/ToolCallArgument" data-name="openrouter::toolcallargument">
+      <a href="../OpenRouter/ToolCallArgument.html">ToolCallArgument</a>
+      
+    </li>
+  
   <li class=" " data-id="openrouter/OpenRouter/TooManyRequestsError" data-name="openrouter::toomanyrequestserror">
       <a href="../OpenRouter/TooManyRequestsError.html">TooManyRequestsError</a>
       
@@ -201,11 +231,26 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">enum</span> OpenRouter::<wbr>Role
+  <span class="kind">
+    enum
+  </span> OpenRouter::<wbr>Role
 
 </h1>
 
 
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>The role type of a Message</p>
 
 
 
@@ -232,9 +277,7 @@
   </h2>
   
     
-      <a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/message.cr#L4" target="_blank">
-        openrouter/types/message.cr
-      </a>
+      openrouter/types/message.cr
     
     <br/>
   
@@ -277,12 +320,13 @@
 
 
 
+  
 
+  
 
+  
 
-
-
-
+  
   <h2>
     <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
   <svg class="octicon-link" aria-hidden="true">
@@ -296,20 +340,28 @@
       <li class="entry-summary">
         <a href="#assistant%3F-instance-method" class="signature"><strong>#assistant?</strong></a>
         
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../OpenRouter/Role.html#Assistant">Assistant</a></code></p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#system%3F-instance-method" class="signature"><strong>#system?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../OpenRouter/Role.html#System">System</a></code></p></div>
         
       </li>
     
       <li class="entry-summary">
         <a href="#tool%3F-instance-method" class="signature"><strong>#tool?</strong></a>
         
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../OpenRouter/Role.html#Tool">Tool</a></code></p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#user%3F-instance-method" class="signature"><strong>#user?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../OpenRouter/Role.html#User">User</a></code></p></div>
         
       </li>
     
@@ -317,69 +369,69 @@
 
 
 
-<div class="methods-inherited">
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
   
-    
-
-
-    
-
-
-    
-
-
-    
-
 
   
-    
-
-
-    
-
-
-    
-
-
-    
-
 
   
-    
-
-
-    
-
-
-    
-
-
-    
-
 
   
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-  
-</div>
-
-
-
-
-
-
-
-
   <h2>
     <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
   <svg class="octicon-link" aria-hidden="true">
@@ -397,10 +449,13 @@
         <a class="method-permalink" href="#assistant%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../OpenRouter/Role.html#Assistant">Assistant</a></code></p>
+        </div>
+      
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/message.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -413,10 +468,13 @@
         <a class="method-permalink" href="#system%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../OpenRouter/Role.html#System">System</a></code></p>
+        </div>
+      
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/message.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -429,10 +487,13 @@
         <a class="method-permalink" href="#tool%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../OpenRouter/Role.html#Tool">Tool</a></code></p>
+        </div>
+      
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/message.cr#L8" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -445,14 +506,18 @@
         <a class="method-permalink" href="#user%3F-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../OpenRouter/Role.html#User">User</a></code></p>
+        </div>
+      
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/message.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
   
+
 
 
 </div>

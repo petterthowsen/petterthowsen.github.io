@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.13.3">
-<meta name="crystal_docs.project_version" content="0.1.0">
+<meta name="generator" content="Crystal Docs 1.15.1">
+<meta name="crystal_docs.project_version" content="0.12.0-dev">
 <meta name="crystal_docs.project_name" content="openrouter">
 
 
@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="openrouter">
-  <title>OpenRouter::CompletionRequest - openrouter 0.1.0</title>
+  <title>OpenRouter::CompletionRequest - openrouter 0.12.0-dev</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -45,7 +45,7 @@
       </h1>
 
       <span class="project-version">
-        0.1.0
+        0.12.0-dev
       </span>
     </div>
   </div>
@@ -92,6 +92,16 @@
       
     </li>
   
+  <li class=" " data-id="openrouter/OpenRouter/Content" data-name="openrouter::content">
+      <a href="../OpenRouter/Content.html">Content</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ContentPart" data-name="openrouter::contentpart">
+      <a href="../OpenRouter/ContentPart.html">ContentPart</a>
+      
+    </li>
+  
   <li class=" " data-id="openrouter/OpenRouter/Error" data-name="openrouter::error">
       <a href="../OpenRouter/Error.html">Error</a>
       
@@ -102,8 +112,18 @@
       
     </li>
   
-  <li class=" " data-id="openrouter/OpenRouter/FunctionDescription" data-name="openrouter::functiondescription">
-      <a href="../OpenRouter/FunctionDescription.html">FunctionDescription</a>
+  <li class=" " data-id="openrouter/OpenRouter/Function" data-name="openrouter::function">
+      <a href="../OpenRouter/Function.html">Function</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/FunctionParameter" data-name="openrouter::functionparameter">
+      <a href="../OpenRouter/FunctionParameter.html">FunctionParameter</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/InvalidJSONResponse" data-name="openrouter::invalidjsonresponse">
+      <a href="../OpenRouter/InvalidJSONResponse.html">InvalidJSONResponse</a>
       
     </li>
   
@@ -129,6 +149,11 @@
   
   <li class=" " data-id="openrouter/OpenRouter/PaymentRequiredError" data-name="openrouter::paymentrequirederror">
       <a href="../OpenRouter/PaymentRequiredError.html">PaymentRequiredError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Reasoning" data-name="openrouter::reasoning">
+      <a href="../OpenRouter/Reasoning.html">Reasoning</a>
       
     </li>
   
@@ -172,6 +197,11 @@
       
     </li>
   
+  <li class=" " data-id="openrouter/OpenRouter/ToolCallArgument" data-name="openrouter::toolcallargument">
+      <a href="../OpenRouter/ToolCallArgument.html">ToolCallArgument</a>
+      
+    </li>
+  
   <li class=" " data-id="openrouter/OpenRouter/TooManyRequestsError" data-name="openrouter::toomanyrequestserror">
       <a href="../OpenRouter/TooManyRequestsError.html">TooManyRequestsError</a>
       
@@ -201,12 +231,16 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">class</span> OpenRouter::<wbr>CompletionRequest
+  <span class="kind">
+    class
+  </span> OpenRouter::<wbr>CompletionRequest
 
 </h1>
 
 
   <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/CompletionRequest.html">OpenRouter::CompletionRequest</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
 
 
 
@@ -234,9 +268,7 @@
   </h2>
   
     
-      <a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L3" target="_blank">
-        openrouter/types/completion_request.cr
-      </a>
+      openrouter/types/completion_request.cr
     
     <br/>
   
@@ -245,6 +277,7 @@
 
 
 
+  
   <h2>
     <a id="constructors" class="anchor" href="#constructors">
   <svg class="octicon-link" aria-hidden="true">
@@ -256,23 +289,23 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28messages%3AArray%28Message%29%2Cmodel%3AString%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(messages : Array(Message), model : String | Nil = <span class="n">nil</span>)</a>
+        <a href="#new%28messages%3AArray%28Message%29%2Cmodel%3AString%7CNil%3Dnil%2Ctools%3AArray%28Tool%29%3D%5B%5DofTool%29-class-method" class="signature"><strong>.new</strong>(messages : Array(Message), model : String | Nil = <span class="n">nil</span>, tools : Array(Tool) = <span class="o">[]</span> <span class="k">of</span> <span class="t">Tool</span>)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#new%28prompt%3AString%2Cmodel%3AString%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(prompt : String, model : String | Nil = <span class="n">nil</span>)</a>
+        <a href="#new%28prompt%3AString%2Cmodel%3AString%7CNil%3Dnil%2Ctools%3AArray%28Tool%29%3D%5B%5DofTool%29-class-method" class="signature"><strong>.new</strong>(prompt : String, model : String | Nil = <span class="n">nil</span>, tools : Array(Tool) = <span class="o">[]</span> <span class="k">of</span> <span class="t">Tool</span>)</a>
         
       </li>
     
   </ul>
 
 
+  
 
+  
 
-
-
-
+  
   <h2>
     <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
   <svg class="octicon-link" aria-hidden="true">
@@ -282,6 +315,21 @@
     Instance Method Summary
   </h2>
   <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#add_tool%28tool%3ATool%29-instance-method" class="signature"><strong>#add_tool</strong>(tool : Tool)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#force_tool_support%3ABool-instance-method" class="signature"><strong>#force_tool_support</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#force_tool_support%3D%28force_tool_support%3ABool%29-instance-method" class="signature"><strong>#force_tool_support=</strong>(force_tool_support : Bool)</a>
+        
+      </li>
     
       <li class="entry-summary">
         <a href="#frequency_penalty%3AFloat32%7CNil-instance-method" class="signature"><strong>#frequency_penalty</strong> : Float32 | Nil</a>
@@ -334,10 +382,14 @@
       <li class="entry-summary">
         <a href="#messages%3AArray%28Message%29%7CNil-instance-method" class="signature"><strong>#messages</strong> : Array(Message) | Nil</a>
         
+          <div class="summary"><p>The chat message history</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#messages%3D%28messages%3AArray%28Message%29%7CNil%29-instance-method" class="signature"><strong>#messages=</strong>(messages : Array(Message) | Nil)</a>
+        
+          <div class="summary"><p>The chat message history</p></div>
         
       </li>
     
@@ -358,10 +410,14 @@
       <li class="entry-summary">
         <a href="#model%3AString%7CNil-instance-method" class="signature"><strong>#model</strong> : String | Nil</a>
         
+          <div class="summary"><p>The model to use.</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#model%3D%28model%3AString%7CNil%29-instance-method" class="signature"><strong>#model=</strong>(model : String | Nil)</a>
+        
+          <div class="summary"><p>The model to use.</p></div>
         
       </li>
     
@@ -396,10 +452,14 @@
       <li class="entry-summary">
         <a href="#prompt%3AString%7CNil-instance-method" class="signature"><strong>#prompt</strong> : String | Nil</a>
         
+          <div class="summary"><p>A simple text prompt</p></div>
+        
       </li>
     
       <li class="entry-summary">
         <a href="#prompt%3D%28prompt%3AString%7CNil%29-instance-method" class="signature"><strong>#prompt=</strong>(prompt : String | Nil)</a>
+        
+          <div class="summary"><p>A simple text prompt</p></div>
         
       </li>
     
@@ -418,6 +478,20 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#reasoning%3AReasoning%7CNil-instance-method" class="signature"><strong>#reasoning</strong> : Reasoning | Nil</a>
+        
+          <div class="summary"><p>Reasoning configuration for models that support reasoning tokens</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reasoning%3D%28reasoning%3AReasoning%7CNil%29-instance-method" class="signature"><strong>#reasoning=</strong>(reasoning : Reasoning | Nil)</a>
+        
+          <div class="summary"><p>Reasoning configuration for models that support reasoning tokens</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#repetition_penalty%3AFloat32%7CNil-instance-method" class="signature"><strong>#repetition_penalty</strong> : Float32 | Nil</a>
         
           <div class="summary"><p>Range: (0, 29)</p></div>
@@ -428,6 +502,16 @@
         <a href="#repetition_penalty%3D%28repetition_penalty%3AFloat32%7CNil%29-instance-method" class="signature"><strong>#repetition_penalty=</strong>(repetition_penalty : Float32 | Nil)</a>
         
           <div class="summary"><p>Range: (0, 29)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#respond_with_json%3ABool-instance-method" class="signature"><strong>#respond_with_json</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#respond_with_json%3D%28respond_with_json%3ABool%29-instance-method" class="signature"><strong>#respond_with_json=</strong>(respond_with_json : Bool)</a>
         
       </li>
     
@@ -593,37 +677,37 @@
 
 
 
-<div class="methods-inherited">
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
   
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-  
-</div>
-
-
   <h2>
     <a id="constructor-detail" class="anchor" href="#constructor-detail">
   <svg class="octicon-link" aria-hidden="true">
@@ -633,45 +717,41 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(messages:Array(Message),model:String|Nil=nil)-class-method">
+    <div class="entry-detail" id="new(messages:Array(Message),model:String|Nil=nil,tools:Array(Tool)=[]ofTool)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(messages : Array(<a href="../OpenRouter/Message.html">Message</a>), model : String | Nil = <span class="n">nil</span>)
+        def self.<strong>new</strong>(messages : Array(<a href="../OpenRouter/Message.html">Message</a>), model : String | Nil = <span class="n">nil</span>, tools : Array(<a href="../OpenRouter/Tool.html">Tool</a>) = <span class="o">[]</span> <span class="k">of</span> <span class="t">Tool</span>)
 
-        <a class="method-permalink" href="#new%28messages%3AArray%28Message%29%2Cmodel%3AString%7CNil%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28messages%3AArray%28Message%29%2Cmodel%3AString%7CNil%3Dnil%2Ctools%3AArray%28Tool%29%3D%5B%5DofTool%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L82" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="new(prompt:String,model:String|Nil=nil)-class-method">
+    <div class="entry-detail" id="new(prompt:String,model:String|Nil=nil,tools:Array(Tool)=[]ofTool)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(prompt : String, model : String | Nil = <span class="n">nil</span>)
+        def self.<strong>new</strong>(prompt : String, model : String | Nil = <span class="n">nil</span>, tools : Array(<a href="../OpenRouter/Tool.html">Tool</a>) = <span class="o">[]</span> <span class="k">of</span> <span class="t">Tool</span>)
 
-        <a class="method-permalink" href="#new%28prompt%3AString%2Cmodel%3AString%7CNil%3Dnil%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28prompt%3AString%2Cmodel%3AString%7CNil%3Dnil%2Ctools%3AArray%28Tool%29%3D%5B%5DofTool%29-class-method">#</a>
       </div>
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L77" target="_blank">View source</a>]
         
       </div>
     </div>
   
 
 
+  
 
+  
 
-
-
-
+  
   <h2>
     <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
   <svg class="octicon-link" aria-hidden="true">
@@ -680,6 +760,48 @@
 </a>
     Instance Method Detail
   </h2>
+  
+    <div class="entry-detail" id="add_tool(tool:Tool)-instance-method">
+      <div class="signature">
+        
+        def <strong>add_tool</strong>(tool : <a href="../OpenRouter/Tool.html">Tool</a>)
+
+        <a class="method-permalink" href="#add_tool%28tool%3ATool%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="force_tool_support:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>force_tool_support</strong> : Bool
+
+        <a class="method-permalink" href="#force_tool_support%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="force_tool_support=(force_tool_support:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>force_tool_support=</strong>(force_tool_support : Bool)
+
+        <a class="method-permalink" href="#force_tool_support%3D%28force_tool_support%3ABool%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
   
     <div class="entry-detail" id="frequency_penalty:Float32|Nil-instance-method">
       <div class="signature">
@@ -696,8 +818,6 @@
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L39" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -718,8 +838,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L39" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -733,8 +851,6 @@
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L48" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -750,8 +866,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L48" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -766,8 +880,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L49" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -781,8 +893,6 @@
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L49" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -803,8 +913,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L18" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -824,8 +932,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L18" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -837,10 +943,13 @@
         <a class="method-permalink" href="#messages%3AArray%28Message%29%7CNil-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>The chat message history</p>
+        </div>
+      
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -853,10 +962,13 @@
         <a class="method-permalink" href="#messages%3D%28messages%3AArray%28Message%29%7CNil%29-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>The chat message history</p>
+        </div>
+      
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L4" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -877,8 +989,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L54" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -898,8 +1008,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L54" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -911,10 +1019,15 @@
         <a class="method-permalink" href="#model%3AString%7CNil-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>The model to use.</p>
+<p>Browse models at openrouter.ai/models,
+or use the <code>get_models</code> method of the OpenRouter::Client</p>
+        </div>
+      
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -927,10 +1040,15 @@
         <a class="method-permalink" href="#model%3D%28model%3AString%7CNil%29-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>The model to use.</p>
+<p>Browse models at openrouter.ai/models,
+or use the <code>get_models</code> method of the OpenRouter::Client</p>
+        </div>
+      
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L7" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -951,8 +1069,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L71" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -971,8 +1087,6 @@
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L71" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -993,8 +1107,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L42" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1014,8 +1126,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L42" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1027,10 +1137,13 @@
         <a class="method-permalink" href="#prompt%3AString%7CNil-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>A simple text prompt</p>
+        </div>
+      
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1043,10 +1156,13 @@
         <a class="method-permalink" href="#prompt%3D%28prompt%3AString%7CNil%29-instance-method">#</a>
       </div>
       
+        <div class="doc">
+          
+          <p>A simple text prompt</p>
+        </div>
+      
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1067,8 +1183,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L75" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1088,7 +1202,43 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L75" target="_blank">View source</a>]
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reasoning:Reasoning|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>reasoning</strong> : <a href="../OpenRouter/Reasoning.html">Reasoning</a> | Nil
+
+        <a class="method-permalink" href="#reasoning%3AReasoning%7CNil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Reasoning configuration for models that support reasoning tokens</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reasoning=(reasoning:Reasoning|Nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>reasoning=</strong>(reasoning : <a href="../OpenRouter/Reasoning.html">Reasoning</a> | Nil)
+
+        <a class="method-permalink" href="#reasoning%3D%28reasoning%3AReasoning%7CNil%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Reasoning configuration for models that support reasoning tokens</p>
+        </div>
+      
+      <br/>
+      <div>
         
       </div>
     </div>
@@ -1109,8 +1259,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L45" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1130,7 +1278,33 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L45" target="_blank">View source</a>]
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="respond_with_json:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>respond_with_json</strong> : Bool
+
+        <a class="method-permalink" href="#respond_with_json%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="respond_with_json=(respond_with_json:Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>respond_with_json=</strong>(respond_with_json : Bool)
+
+        <a class="method-permalink" href="#respond_with_json%3D%28respond_with_json%3ABool%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
         
       </div>
     </div>
@@ -1146,8 +1320,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L72" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1161,8 +1333,6 @@
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L72" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1186,8 +1356,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L30" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1210,8 +1378,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L30" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1230,8 +1396,6 @@
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L12" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1252,8 +1416,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L12" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1272,8 +1434,6 @@
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L15" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1294,8 +1454,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L15" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1309,8 +1467,6 @@
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L19" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1326,8 +1482,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L19" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1342,8 +1496,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L87" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1357,8 +1509,6 @@
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L93" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1383,8 +1533,6 @@ See models supporting tool calling: openrouter.ai/models?supported_parameters=to
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L26" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1408,8 +1556,6 @@ See models supporting tool calling: openrouter.ai/models?supported_parameters=to
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L26" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1428,8 +1574,6 @@ See models supporting tool calling: openrouter.ai/models?supported_parameters=to
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L57" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1450,8 +1594,6 @@ See models supporting tool calling: openrouter.ai/models?supported_parameters=to
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L57" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1470,8 +1612,6 @@ See models supporting tool calling: openrouter.ai/models?supported_parameters=to
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L36" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1492,8 +1632,6 @@ See models supporting tool calling: openrouter.ai/models?supported_parameters=to
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L36" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1508,8 +1646,6 @@ See models supporting tool calling: openrouter.ai/models?supported_parameters=to
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L51" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1523,8 +1659,6 @@ See models supporting tool calling: openrouter.ai/models?supported_parameters=to
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L51" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1545,8 +1679,6 @@ See models supporting tool calling: openrouter.ai/models?supported_parameters=to
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L33" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1565,8 +1697,6 @@ See models supporting tool calling: openrouter.ai/models?supported_parameters=to
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L33" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1596,8 +1726,6 @@ prediction?: { type: 'content'; content: string; };</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L68" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -1626,11 +1754,10 @@ prediction?: { type: 'content'; content: string; };</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/completion_request.cr#L68" target="_blank">View source</a>]
-        
       </div>
     </div>
   
+
 
 
 </div>

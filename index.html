@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.13.3">
-<meta name="crystal_docs.project_version" content="0.1.0">
+<meta name="generator" content="Crystal Docs 1.15.1">
+<meta name="crystal_docs.project_version" content="0.12.0-dev">
 <meta name="crystal_docs.project_name" content="openrouter">
 
 
@@ -14,7 +14,7 @@
 <script type="text/javascript" src="js/doc.js"></script>
 
   <meta name="repository-name" content="openrouter">
-  <title>openrouter 0.1.0</title>
+  <title>openrouter 0.12.0-dev</title>
   <script type="text/javascript">
   CrystalDocs.base_path = "";
   </script>
@@ -45,7 +45,7 @@
       </h1>
 
       <span class="project-version">
-        0.1.0
+        0.12.0-dev
       </span>
     </div>
   </div>
@@ -92,6 +92,16 @@
       
     </li>
   
+  <li class=" " data-id="openrouter/OpenRouter/Content" data-name="openrouter::content">
+      <a href="OpenRouter/Content.html">Content</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ContentPart" data-name="openrouter::contentpart">
+      <a href="OpenRouter/ContentPart.html">ContentPart</a>
+      
+    </li>
+  
   <li class=" " data-id="openrouter/OpenRouter/Error" data-name="openrouter::error">
       <a href="OpenRouter/Error.html">Error</a>
       
@@ -102,8 +112,18 @@
       
     </li>
   
-  <li class=" " data-id="openrouter/OpenRouter/FunctionDescription" data-name="openrouter::functiondescription">
-      <a href="OpenRouter/FunctionDescription.html">FunctionDescription</a>
+  <li class=" " data-id="openrouter/OpenRouter/Function" data-name="openrouter::function">
+      <a href="OpenRouter/Function.html">Function</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/FunctionParameter" data-name="openrouter::functionparameter">
+      <a href="OpenRouter/FunctionParameter.html">FunctionParameter</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/InvalidJSONResponse" data-name="openrouter::invalidjsonresponse">
+      <a href="OpenRouter/InvalidJSONResponse.html">InvalidJSONResponse</a>
       
     </li>
   
@@ -129,6 +149,11 @@
   
   <li class=" " data-id="openrouter/OpenRouter/PaymentRequiredError" data-name="openrouter::paymentrequirederror">
       <a href="OpenRouter/PaymentRequiredError.html">PaymentRequiredError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Reasoning" data-name="openrouter::reasoning">
+      <a href="OpenRouter/Reasoning.html">Reasoning</a>
       
     </li>
   
@@ -172,6 +197,11 @@
       
     </li>
   
+  <li class=" " data-id="openrouter/OpenRouter/ToolCallArgument" data-name="openrouter::toolcallargument">
+      <a href="OpenRouter/ToolCallArgument.html">ToolCallArgument</a>
+      
+    </li>
+  
   <li class=" " data-id="openrouter/OpenRouter/TooManyRequestsError" data-name="openrouter::toomanyrequestserror">
       <a href="OpenRouter/TooManyRequestsError.html">TooManyRequestsError</a>
       
@@ -204,6 +234,23 @@
   </svg>
 </a>openrouter</h1>
 <p>HTTP Client for the OpenRouter API (https://openrouter.ai)</p>
+<h2><a id="documentation" class="anchor" href="#documentation">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Documentation</h2>
+<p>docs hosted at <a href="https://crystaldoc.info/github/petterthowsen/openrouter/v0.3.0/index.html">crystaldoc.info</a></p>
+<h2><a id="support-features" class="anchor" href="#support-features">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Support / Features</h2>
+<ul>
+<li>text completion</li>
+<li>chat completion</li>
+<li>multimodal I.E images</li>
+<li>tool use</li>
+</ul>
 <h2><a id="installation" class="anchor" href="#installation">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
@@ -238,23 +285,35 @@ response <span class="o">=</span> client.complete(<span class="s">&quot;Hello, h
 
 <span class="c"># or use the CompletionRequest class to construct a more complex request with multiple messages:</span>
 request <span class="o">=</span> <span class="t">OpenRouter</span><span class="t">::</span><span class="t">CompletionRequest</span>.new(
-      model: <span class="s">&quot;mistralai/mistral-7b-instruct:free&quot;</span>,
-      messages: [
-        <span class="t">OpenRouter</span><span class="t">::</span><span class="t">Message</span>.new(role: <span class="t">OpenRouter</span><span class="t">::</span><span class="t">Role</span><span class="t">::</span><span class="t">User</span>, content: <span class="s">&quot;If I have 10 apples...&quot;</span>),
-        <span class="t">OpenRouter</span><span class="t">::</span><span class="t">Message</span>.new(role: <span class="t">OpenRouter</span><span class="t">::</span><span class="t">Role</span><span class="t">::</span><span class="t">Assistant</span>, content: <span class="s">&quot;You have 10 apples and... ?&quot;</span>),
-        <span class="t">OpenRouter</span><span class="t">::</span><span class="t">Message</span>.new(role: <span class="t">OpenRouter</span><span class="t">::</span><span class="t">Role</span><span class="t">::</span><span class="t">User</span>, content: <span class="s">&quot;I eat half of them. How many do I have left?&quot;</span>),
-      ]
-    )
+  model: <span class="s">&quot;mistralai/mistral-7b-instruct:free&quot;</span>,
+  messages: [
+    <span class="t">OpenRouter</span><span class="t">::</span><span class="t">Message</span>.new(role: <span class="t">OpenRouter</span><span class="t">::</span><span class="t">Role</span><span class="t">::</span><span class="t">User</span>, content: <span class="s">&quot;If I have 10 apples...&quot;</span>),
+    <span class="t">OpenRouter</span><span class="t">::</span><span class="t">Message</span>.new(role: <span class="t">OpenRouter</span><span class="t">::</span><span class="t">Role</span><span class="t">::</span><span class="t">Assistant</span>, content: <span class="s">&quot;You have 10 apples and... ?&quot;</span>),
+    <span class="t">OpenRouter</span><span class="t">::</span><span class="t">Message</span>.new(role: <span class="t">OpenRouter</span><span class="t">::</span><span class="t">Role</span><span class="t">::</span><span class="t">User</span>, content: <span class="s">&quot;I eat half of them. How many do I have left?&quot;</span>),
+  ]
+)
 
 response <span class="o">=</span> client.complete(request)
+
+<span class="c"># you can get the content like this:</span>
+choice <span class="o">=</span> response.choices[<span class="n">0</span>].<span class="k">as</span>(<span class="t">OpenRouter</span><span class="t">::</span><span class="t">NonStreamingChoice</span>)
+
+<span class="c"># choice is a OpenRouter::Content</span>
+<span class="c"># which is alias of String | Array(NamedTuple(type, value))</span>
+<span class="c"># if you know it&#39;s only one text response, use the utility method:</span>
+text : <span class="t">String</span> <span class="o">=</span> choice.content_string
+puts <span class="s">&quot;AI Responded with: &quot;</span> <span class="o">+</span> text
+
+<span class="c"># otherwise, you can access it like so (I think):</span>
+choice.content[<span class="n">0</span>][<span class="n">:value</span>] <span class="c"># =&gt; String</span>
 </code></pre>
 <h2><a id="development" class="anchor" href="#development">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Development</h2>
-<p>Pretty self-explanatory. The main class is the Client in <code>./src/openrouter/client.cr</code>.
-It uses the CompletionRequest in <code>./src/openrouter/types/completion_request.cr</code> and Response in <code>./src/openrouter/types/response.cr</code>.</p>
+<p>The main class is the Client in <code>./src/openrouter/client.cr</code>.</p>
+<p>It uses the CompletionRequest in <code>./src/openrouter/types/completion_request.cr</code> and Response in <code>./src/openrouter/types/response.cr</code>.</p>
 <h2><a id="contributing" class="anchor" href="#contributing">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>

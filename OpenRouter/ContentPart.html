@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="openrouter">
-  <title>OpenRouter::Usage - openrouter 0.12.0-dev</title>
+  <title>OpenRouter::ContentPart - openrouter 0.12.0-dev</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -97,7 +97,7 @@
       
     </li>
   
-  <li class=" " data-id="openrouter/OpenRouter/ContentPart" data-name="openrouter::contentpart">
+  <li class=" current" data-id="openrouter/OpenRouter/ContentPart" data-name="openrouter::contentpart">
       <a href="../OpenRouter/ContentPart.html">ContentPart</a>
       
     </li>
@@ -212,7 +212,7 @@
       
     </li>
   
-  <li class=" current" data-id="openrouter/OpenRouter/Usage" data-name="openrouter::usage">
+  <li class=" " data-id="openrouter/OpenRouter/Usage" data-name="openrouter::usage">
       <a href="../OpenRouter/Usage.html">Usage</a>
       
     </li>
@@ -232,18 +232,37 @@
 <h1 class="type-name">
 
   <span class="kind">
-    struct
-  </span> OpenRouter::<wbr>Usage
+    alias
+  </span> OpenRouter::<wbr>ContentPart
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/Usage.html">OpenRouter::Usage</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>One content part in a multi-modal message.</p>
 
 
+
+  <h2>
+    <a id="alias-definition" class="anchor" href="#alias-definition">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Alias Definition
+  </h2>
+  <code>{type: String, value: String}</code>
 
 
 
@@ -268,7 +287,7 @@
   </h2>
   
     
-      openrouter/types/response.cr
+      openrouter/types/message.cr
     
     <br/>
   
@@ -278,222 +297,25 @@
 
 
   
-  <h2>
-    <a id="constructors" class="anchor" href="#constructors">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Constructors
-  </h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#new%28json%3AJSON%3A%3AAny%29-class-method" class="signature"><strong>.new</strong>(json : JSON::Any)</a>
-        
-      </li>
-    
-  </ul>
-
 
   
 
   
 
   
-  <h2>
-    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Instance Method Summary
-  </h2>
-  <ul class="list-summary">
-    
-      <li class="entry-summary">
-        <a href="#completion%3AInt32-instance-method" class="signature"><strong>#completion</strong> : Int32</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#prompt%3AInt32-instance-method" class="signature"><strong>#prompt</strong> : Int32</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#to_json%28io%3AIO%29-instance-method" class="signature"><strong>#to_json</strong>(io : IO)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#total%3AInt32-instance-method" class="signature"><strong>#total</strong> : Int32</a>
-        
-      </li>
-    
-  </ul>
-
 
 
   <div class="methods-inherited">
     
-      
-
-
-      
-
-
-      
-
-
-      
-
-
-    
-      
-
-
-      
-
-
-      
-
-
-      
-
-
-    
-      
-
-
-      
-
-
-      
-
-
-      
-
-
-    
   </div>
 
   
-  <h2>
-    <a id="constructor-detail" class="anchor" href="#constructor-detail">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Constructor Detail
-  </h2>
-  
-    <div class="entry-detail" id="new(json:JSON::Any)-class-method">
-      <div class="signature">
-        
-        def self.<strong>new</strong>(json : JSON::Any)
-
-        <a class="method-permalink" href="#new%28json%3AJSON%3A%3AAny%29-class-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-
 
   
 
   
 
   
-  <h2>
-    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-    Instance Method Detail
-  </h2>
-  
-    <div class="entry-detail" id="completion:Int32-instance-method">
-      <div class="signature">
-        
-        def <strong>completion</strong> : Int32
-
-        <a class="method-permalink" href="#completion%3AInt32-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="prompt:Int32-instance-method">
-      <div class="signature">
-        
-        def <strong>prompt</strong> : Int32
-
-        <a class="method-permalink" href="#prompt%3AInt32-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="to_json(io:IO)-instance-method">
-      <div class="signature">
-        
-        def <strong>to_json</strong>(io : IO)
-
-        <a class="method-permalink" href="#to_json%28io%3AIO%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="to_json(json:JSON::Builder)-instance-method">
-      <div class="signature">
-        
-        def <strong>to_json</strong>(json : JSON::Builder)
-
-        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="total:Int32-instance-method">
-      <div class="signature">
-        
-        def <strong>total</strong> : Int32
-
-        <a class="method-permalink" href="#total%3AInt32-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-
 
 
 </div>

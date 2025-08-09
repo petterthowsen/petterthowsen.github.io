@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="openrouter">
-  <title>OpenRouter::Usage - openrouter 0.12.0-dev</title>
+  <title>OpenRouter::InvalidJSONResponse - openrouter 0.12.0-dev</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -122,7 +122,7 @@
       
     </li>
   
-  <li class=" " data-id="openrouter/OpenRouter/InvalidJSONResponse" data-name="openrouter::invalidjsonresponse">
+  <li class=" current" data-id="openrouter/OpenRouter/InvalidJSONResponse" data-name="openrouter::invalidjsonresponse">
       <a href="../OpenRouter/InvalidJSONResponse.html">InvalidJSONResponse</a>
       
     </li>
@@ -212,7 +212,7 @@
       
     </li>
   
-  <li class=" current" data-id="openrouter/OpenRouter/Usage" data-name="openrouter::usage">
+  <li class=" " data-id="openrouter/OpenRouter/Usage" data-name="openrouter::usage">
       <a href="../OpenRouter/Usage.html">Usage</a>
       
     </li>
@@ -232,13 +232,13 @@
 <h1 class="type-name">
 
   <span class="kind">
-    struct
-  </span> OpenRouter::<wbr>Usage
+    class
+  </span> OpenRouter::<wbr>InvalidJSONResponse
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/Usage.html">OpenRouter::Usage</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/InvalidJSONResponse.html">OpenRouter::InvalidJSONResponse</a></li><li class="superclass">Exception</li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
 
 
 
@@ -289,7 +289,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28json%3AJSON%3A%3AAny%29-class-method" class="signature"><strong>.new</strong>(json : JSON::Any)</a>
+        <a href="#new%28text%3AString%2Ccause%3AException%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(text : String, cause : Exception | Nil = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -312,27 +312,14 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#completion%3AInt32-instance-method" class="signature"><strong>#completion</strong> : Int32</a>
+        <a href="#cause%3AException%7CNil-instance-method" class="signature"><strong>#cause</strong> : Exception | Nil</a>
+        
+          <div class="summary"><p>Returns the previous exception at the time this exception was raised.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#prompt%3AInt32-instance-method" class="signature"><strong>#prompt</strong> : Int32</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#to_json%28io%3AIO%29-instance-method" class="signature"><strong>#to_json</strong>(io : IO)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#total%3AInt32-instance-method" class="signature"><strong>#total</strong> : Int32</a>
+        <a href="#text%3AString-instance-method" class="signature"><strong>#text</strong> : String</a>
         
       </li>
     
@@ -393,12 +380,12 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(json:JSON::Any)-class-method">
+    <div class="entry-detail" id="new(text:String,cause:Exception|Nil=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(json : JSON::Any)
+        def self.<strong>new</strong>(text : String, cause : Exception | Nil = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28json%3AJSON%3A%3AAny%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28text%3AString%2Ccause%3AException%7CNil%3Dnil%29-class-method">#</a>
       </div>
       
       <br/>
@@ -423,13 +410,24 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="completion:Int32-instance-method">
+    <div class="entry-detail" id="cause:Exception|Nil-instance-method">
       <div class="signature">
         
-        def <strong>completion</strong> : Int32
+        def <strong>cause</strong> : Exception | Nil
 
-        <a class="method-permalink" href="#completion%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#cause%3AException%7CNil-instance-method">#</a>
       </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Exception
+            </div>
+          
+          <p>Returns the previous exception at the time this exception was raised.
+This is useful for wrapping exceptions and retaining the original
+exception information.</p>
+        </div>
       
       <br/>
       <div>
@@ -437,54 +435,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="prompt:Int32-instance-method">
+    <div class="entry-detail" id="text:String-instance-method">
       <div class="signature">
         
-        def <strong>prompt</strong> : Int32
+        def <strong>text</strong> : String
 
-        <a class="method-permalink" href="#prompt%3AInt32-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="to_json(io:IO)-instance-method">
-      <div class="signature">
-        
-        def <strong>to_json</strong>(io : IO)
-
-        <a class="method-permalink" href="#to_json%28io%3AIO%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="to_json(json:JSON::Builder)-instance-method">
-      <div class="signature">
-        
-        def <strong>to_json</strong>(json : JSON::Builder)
-
-        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="total:Int32-instance-method">
-      <div class="signature">
-        
-        def <strong>total</strong> : Int32
-
-        <a class="method-permalink" href="#total%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#text%3AString-instance-method">#</a>
       </div>
       
       <br/>

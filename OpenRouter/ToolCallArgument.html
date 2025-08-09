@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="openrouter">
-  <title>OpenRouter::Usage - openrouter 0.12.0-dev</title>
+  <title>OpenRouter::ToolCallArgument - openrouter 0.12.0-dev</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -197,7 +197,7 @@
       
     </li>
   
-  <li class=" " data-id="openrouter/OpenRouter/ToolCallArgument" data-name="openrouter::toolcallargument">
+  <li class=" current" data-id="openrouter/OpenRouter/ToolCallArgument" data-name="openrouter::toolcallargument">
       <a href="../OpenRouter/ToolCallArgument.html">ToolCallArgument</a>
       
     </li>
@@ -212,7 +212,7 @@
       
     </li>
   
-  <li class=" current" data-id="openrouter/OpenRouter/Usage" data-name="openrouter::usage">
+  <li class=" " data-id="openrouter/OpenRouter/Usage" data-name="openrouter::usage">
       <a href="../OpenRouter/Usage.html">Usage</a>
       
     </li>
@@ -233,12 +233,12 @@
 
   <span class="kind">
     struct
-  </span> OpenRouter::<wbr>Usage
+  </span> OpenRouter::<wbr>ToolCallArgument
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/Usage.html">OpenRouter::Usage</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/ToolCallArgument.html">OpenRouter::ToolCallArgument</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
@@ -268,7 +268,7 @@
   </h2>
   
     
-      openrouter/types/response.cr
+      openrouter/types/tool_call.cr
     
     <br/>
   
@@ -289,7 +289,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28json%3AJSON%3A%3AAny%29-class-method" class="signature"><strong>.new</strong>(json : JSON::Any)</a>
+        <a href="#new%28name%3AString%2Cvalue%3AJSON%3A%3AAny%29-class-method" class="signature"><strong>.new</strong>(name : String, value : JSON::Any)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28name%3AString%2Cvalue%3AString%29-class-method" class="signature"><strong>.new</strong>(name : String, value : String)</a>
         
       </li>
     
@@ -297,6 +302,23 @@
 
 
   
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#from_json%28json%3AJSON%3A%3AAny%29-class-method" class="signature"><strong>.from_json</strong>(json : JSON::Any)</a>
+        
+      </li>
+    
+  </ul>
+
 
   
 
@@ -312,12 +334,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#completion%3AInt32-instance-method" class="signature"><strong>#completion</strong> : Int32</a>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#prompt%3AInt32-instance-method" class="signature"><strong>#prompt</strong> : Int32</a>
+        <a href="#name%3AString-instance-method" class="signature"><strong>#name</strong> : String</a>
         
       </li>
     
@@ -332,7 +349,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#total%3AInt32-instance-method" class="signature"><strong>#total</strong> : Int32</a>
+        <a href="#value%3AJSON%3A%3AAny-instance-method" class="signature"><strong>#value</strong> : JSON::Any</a>
         
       </li>
     
@@ -393,12 +410,26 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(json:JSON::Any)-class-method">
+    <div class="entry-detail" id="new(name:String,value:JSON::Any)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(json : JSON::Any)
+        def self.<strong>new</strong>(name : String, value : JSON::Any)
 
-        <a class="method-permalink" href="#new%28json%3AJSON%3A%3AAny%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28name%3AString%2Cvalue%3AJSON%3A%3AAny%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(name:String,value:String)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(name : String, value : String)
+
+        <a class="method-permalink" href="#new%28name%3AString%2Cvalue%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -410,6 +441,30 @@
 
 
   
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="from_json(json:JSON::Any)-class-method">
+      <div class="signature">
+        
+        def self.<strong>from_json</strong>(json : JSON::Any)
+
+        <a class="method-permalink" href="#from_json%28json%3AJSON%3A%3AAny%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
 
   
 
@@ -423,26 +478,12 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="completion:Int32-instance-method">
+    <div class="entry-detail" id="name:String-instance-method">
       <div class="signature">
         
-        def <strong>completion</strong> : Int32
+        def <strong>name</strong> : String
 
-        <a class="method-permalink" href="#completion%3AInt32-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="prompt:Int32-instance-method">
-      <div class="signature">
-        
-        def <strong>prompt</strong> : Int32
-
-        <a class="method-permalink" href="#prompt%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#name%3AString-instance-method">#</a>
       </div>
       
       <br/>
@@ -479,12 +520,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="total:Int32-instance-method">
+    <div class="entry-detail" id="value:JSON::Any-instance-method">
       <div class="signature">
         
-        def <strong>total</strong> : Int32
+        def <strong>value</strong> : JSON::Any
 
-        <a class="method-permalink" href="#total%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#value%3AJSON%3A%3AAny-instance-method">#</a>
       </div>
       
       <br/>

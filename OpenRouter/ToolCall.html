@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.13.3">
-<meta name="crystal_docs.project_version" content="0.1.0">
+<meta name="generator" content="Crystal Docs 1.15.1">
+<meta name="crystal_docs.project_version" content="0.12.0-dev">
 <meta name="crystal_docs.project_name" content="openrouter">
 
 
@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="openrouter">
-  <title>OpenRouter::ToolCall - openrouter 0.1.0</title>
+  <title>OpenRouter::ToolCall - openrouter 0.12.0-dev</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -45,7 +45,7 @@
       </h1>
 
       <span class="project-version">
-        0.1.0
+        0.12.0-dev
       </span>
     </div>
   </div>
@@ -92,6 +92,16 @@
       
     </li>
   
+  <li class=" " data-id="openrouter/OpenRouter/Content" data-name="openrouter::content">
+      <a href="../OpenRouter/Content.html">Content</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/ContentPart" data-name="openrouter::contentpart">
+      <a href="../OpenRouter/ContentPart.html">ContentPart</a>
+      
+    </li>
+  
   <li class=" " data-id="openrouter/OpenRouter/Error" data-name="openrouter::error">
       <a href="../OpenRouter/Error.html">Error</a>
       
@@ -102,8 +112,18 @@
       
     </li>
   
-  <li class=" " data-id="openrouter/OpenRouter/FunctionDescription" data-name="openrouter::functiondescription">
-      <a href="../OpenRouter/FunctionDescription.html">FunctionDescription</a>
+  <li class=" " data-id="openrouter/OpenRouter/Function" data-name="openrouter::function">
+      <a href="../OpenRouter/Function.html">Function</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/FunctionParameter" data-name="openrouter::functionparameter">
+      <a href="../OpenRouter/FunctionParameter.html">FunctionParameter</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/InvalidJSONResponse" data-name="openrouter::invalidjsonresponse">
+      <a href="../OpenRouter/InvalidJSONResponse.html">InvalidJSONResponse</a>
       
     </li>
   
@@ -129,6 +149,11 @@
   
   <li class=" " data-id="openrouter/OpenRouter/PaymentRequiredError" data-name="openrouter::paymentrequirederror">
       <a href="../OpenRouter/PaymentRequiredError.html">PaymentRequiredError</a>
+      
+    </li>
+  
+  <li class=" " data-id="openrouter/OpenRouter/Reasoning" data-name="openrouter::reasoning">
+      <a href="../OpenRouter/Reasoning.html">Reasoning</a>
       
     </li>
   
@@ -172,6 +197,11 @@
       
     </li>
   
+  <li class=" " data-id="openrouter/OpenRouter/ToolCallArgument" data-name="openrouter::toolcallargument">
+      <a href="../OpenRouter/ToolCallArgument.html">ToolCallArgument</a>
+      
+    </li>
+  
   <li class=" " data-id="openrouter/OpenRouter/TooManyRequestsError" data-name="openrouter::toomanyrequestserror">
       <a href="../OpenRouter/TooManyRequestsError.html">TooManyRequestsError</a>
       
@@ -201,13 +231,38 @@
 <div class="main-content">
 <h1 class="type-name">
 
-  <span class="kind">struct</span> OpenRouter::<wbr>ToolCall
+  <span class="kind">
+    struct
+  </span> OpenRouter::<wbr>ToolCall
 
 </h1>
 
 
   <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/ToolCall.html">OpenRouter::ToolCall</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>tool calls look like this:
+&quot;tool_calls&quot;: [
+{
+&quot;id&quot;: &quot;call_9pw1qnYScqvGrCH58HWCvFH6&quot;,
+&quot;type&quot;: &quot;function&quot;,
+&quot;function&quot;: {
+&quot;name&quot;: &quot;get_current_weather&quot;,
+&quot;arguments&quot;: &quot;{ &quot;location&quot;: &quot;Boston, MA&quot;}&quot;
+}
+}
+]</p>
 
 
 
@@ -234,9 +289,7 @@
   </h2>
   
     
-      <a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/tool_call.cr#L2" target="_blank">
-        openrouter/types/tool_call.cr
-      </a>
+      openrouter/types/tool_call.cr
     
     <br/>
   
@@ -245,6 +298,7 @@
 
 
 
+  
   <h2>
     <a id="constructors" class="anchor" href="#constructors">
   <svg class="octicon-link" aria-hidden="true">
@@ -256,6 +310,11 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
+        <a href="#new%28id%3AString%2Cname%3AString%2Carguments%3AArray%28ToolCallArgument%29%3D%5B%5DofToolCallArgument%2Ctype%3AString%3D%22function%22%29-class-method" class="signature"><strong>.new</strong>(id : String, name : String, arguments : Array(ToolCallArgument) = <span class="o">[]</span> <span class="k">of</span> <span class="t">ToolCallArgument</span>, type : String = <span class="s">&quot;function&quot;</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#new%28json%3AJSON%3A%3AAny%29-class-method" class="signature"><strong>.new</strong>(json : JSON::Any)</a>
         
       </li>
@@ -263,11 +322,33 @@
   </ul>
 
 
+  
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#from_json%28json%3AString%29-class-method" class="signature"><strong>.from_json</strong>(json : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#from_json%28json%3AJSON%3A%3AAny%29-class-method" class="signature"><strong>.from_json</strong>(json : JSON::Any)</a>
+        
+      </li>
+    
+  </ul>
 
 
+  
 
-
-
+  
   <h2>
     <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
   <svg class="octicon-link" aria-hidden="true">
@@ -279,7 +360,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#arguments%3AJSON%3A%3AAny-instance-method" class="signature"><strong>#arguments</strong> : JSON::Any</a>
+        <a href="#arguments%3AArray%28ToolCallArgument%29-instance-method" class="signature"><strong>#arguments</strong> : Array(ToolCallArgument)</a>
         
       </li>
     
@@ -294,6 +375,16 @@
       </li>
     
       <li class="entry-summary">
+        <a href="#to_json%28io%3AIO%29-instance-method" class="signature"><strong>#to_json</strong>(io : IO)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
         <a href="#type%3AString-instance-method" class="signature"><strong>#type</strong> : String</a>
         
       </li>
@@ -302,50 +393,50 @@
 
 
 
-<div class="methods-inherited">
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
   
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-  
-    
-
-
-    
-
-
-    
-
-
-    
-
-
-  
-</div>
-
-
   <h2>
     <a id="constructor-detail" class="anchor" href="#constructor-detail">
   <svg class="octicon-link" aria-hidden="true">
@@ -354,6 +445,20 @@
 </a>
     Constructor Detail
   </h2>
+  
+    <div class="entry-detail" id="new(id:String,name:String,arguments:Array(ToolCallArgument)=[]ofToolCallArgument,type:String=&quot;function&quot;)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(id : String, name : String, arguments : Array(<a href="../OpenRouter/ToolCallArgument.html">ToolCallArgument</a>) = <span class="o">[]</span> <span class="k">of</span> <span class="t">ToolCallArgument</span>, type : String = <span class="s">&quot;function&quot;</span>)
+
+        <a class="method-permalink" href="#new%28id%3AString%2Cname%3AString%2Carguments%3AArray%28ToolCallArgument%29%3D%5B%5DofToolCallArgument%2Ctype%3AString%3D%22function%22%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
   
     <div class="entry-detail" id="new(json:JSON::Any)-class-method">
       <div class="signature">
@@ -366,18 +471,54 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/tool_call.cr#L8" target="_blank">View source</a>]
+      </div>
+    </div>
+  
+
+
+  
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="from_json(json:String)-class-method">
+      <div class="signature">
+        
+        def self.<strong>from_json</strong>(json : String)
+
+        <a class="method-permalink" href="#from_json%28json%3AString%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="from_json(json:JSON::Any)-class-method">
+      <div class="signature">
+        
+        def self.<strong>from_json</strong>(json : JSON::Any)
+
+        <a class="method-permalink" href="#from_json%28json%3AJSON%3A%3AAny%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
         
       </div>
     </div>
   
 
 
+  
 
-
-
-
-
+  
   <h2>
     <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
   <svg class="octicon-link" aria-hidden="true">
@@ -387,18 +528,16 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="arguments:JSON::Any-instance-method">
+    <div class="entry-detail" id="arguments:Array(ToolCallArgument)-instance-method">
       <div class="signature">
         
-        def <strong>arguments</strong> : JSON::Any
+        def <strong>arguments</strong> : Array(<a href="../OpenRouter/ToolCallArgument.html">ToolCallArgument</a>)
 
-        <a class="method-permalink" href="#arguments%3AJSON%3A%3AAny-instance-method">#</a>
+        <a class="method-permalink" href="#arguments%3AArray%28ToolCallArgument%29-instance-method">#</a>
       </div>
       
       <br/>
       <div>
-        
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/tool_call.cr#L6" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -414,8 +553,6 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/tool_call.cr#L3" target="_blank">View source</a>]
-        
       </div>
     </div>
   
@@ -430,7 +567,33 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/tool_call.cr#L5" target="_blank">View source</a>]
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_json(io:IO)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_json</strong>(io : IO)
+
+        <a class="method-permalink" href="#to_json%28io%3AIO%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_json(json:JSON::Builder)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_json</strong>(json : JSON::Builder)
+
+        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
         
       </div>
     </div>
@@ -446,11 +609,10 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/petterthowsen/openrouter/blob/v0.1.0/src/openrouter/types/tool_call.cr#L4" target="_blank">View source</a>]
-        
       </div>
     </div>
   
+
 
 
 </div>

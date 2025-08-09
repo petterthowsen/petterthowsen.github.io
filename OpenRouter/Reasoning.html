@@ -14,7 +14,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="openrouter">
-  <title>OpenRouter::Client - openrouter 0.12.0-dev</title>
+  <title>OpenRouter::Reasoning - openrouter 0.12.0-dev</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -82,7 +82,7 @@
       
     </li>
   
-  <li class=" current" data-id="openrouter/OpenRouter/Client" data-name="openrouter::client">
+  <li class=" " data-id="openrouter/OpenRouter/Client" data-name="openrouter::client">
       <a href="../OpenRouter/Client.html">Client</a>
       
     </li>
@@ -152,7 +152,7 @@
       
     </li>
   
-  <li class=" " data-id="openrouter/OpenRouter/Reasoning" data-name="openrouter::reasoning">
+  <li class=" current" data-id="openrouter/OpenRouter/Reasoning" data-name="openrouter::reasoning">
       <a href="../OpenRouter/Reasoning.html">Reasoning</a>
       
     </li>
@@ -232,13 +232,13 @@
 <h1 class="type-name">
 
   <span class="kind">
-    class
-  </span> OpenRouter::<wbr>Client
+    struct
+  </span> OpenRouter::<wbr>Reasoning
 
 </h1>
 
 
-  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/Client.html">OpenRouter::Client</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../OpenRouter/Reasoning.html">OpenRouter::Reasoning</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
 
 
 
@@ -252,7 +252,7 @@
     Overview
   </h2>
 
-  <p>Client for the OpenRouter API</p>
+  <p>Represents the reasoning configuration for models that support reasoning tokens</p>
 
 
 
@@ -279,31 +279,12 @@
   </h2>
   
     
-      openrouter/client.cr
+      openrouter/types/reasoning.cr
     
     <br/>
   
 
 
-
-  
-    <h2>
-      <a id="constant-summary" class="anchor" href="#constant-summary">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>
-      Constant Summary
-    </h2>
-  
-  <dl>
-    
-      <dt class="entry-const" id="BASE_URL">
-        <strong>BASE_URL</strong> = <code><span class="s">&quot;https://openrouter.ai/api/v1&quot;</span></code>
-      </dt>
-      
-    
-  </dl>
 
 
 
@@ -319,9 +300,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#new%28api_key%3AString%2Capp_name%3AString%7CNil%3Dnil%2Capp_url%3AString%7CNil%3Dnil%2Cconnect_timeout%3AFloat64%3D60.0%2Cread_timeout%3AFloat64%3D60.0%29-class-method" class="signature"><strong>.new</strong>(api_key : String, app_name : String | Nil = <span class="n">nil</span>, app_url : String | Nil = <span class="n">nil</span>, connect_timeout : Float64 = <span class="n">60.0</span>, read_timeout : Float64 = <span class="n">60.0</span>)</a>
-        
-          <div class="summary"><p>Initialize a new OpenRouter::Client</p></div>
+        <a href="#new%28effort%3AString%7CNil%3Dnil%2Cmax_tokens%3AInt32%7CNil%3Dnil%2Cexclude%3ABool%3Dfalse%2Cenabled%3ABool%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(effort : String | Nil = <span class="n">nil</span>, max_tokens : Int32 | Nil = <span class="n">nil</span>, exclude : Bool = <span class="n">false</span>, enabled : Bool | Nil = <span class="n">nil</span>)</a>
         
       </li>
     
@@ -329,6 +308,53 @@
 
 
   
+  <h2>
+    <a id="class-method-summary" class="anchor" href="#class-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#enabled%28exclude%3ABool%3Dfalse%29-class-method" class="signature"><strong>.enabled</strong>(exclude : Bool = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Create a reasoning config with default parameters</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#high%28exclude%3ABool%3Dfalse%29-class-method" class="signature"><strong>.high</strong>(exclude : Bool = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Create a reasoning config with high effort</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#low%28exclude%3ABool%3Dfalse%29-class-method" class="signature"><strong>.low</strong>(exclude : Bool = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Create a reasoning config with low effort</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#medium%28exclude%3ABool%3Dfalse%29-class-method" class="signature"><strong>.medium</strong>(exclude : Bool = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Create a reasoning config with medium effort</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#with_max_tokens%28max_tokens%3AInt32%2Cexclude%3ABool%3Dfalse%29-class-method" class="signature"><strong>.with_max_tokens</strong>(max_tokens : Int32, exclude : Bool = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Create a reasoning config with specific max tokens</p></div>
+        
+      </li>
+    
+  </ul>
+
 
   
 
@@ -344,103 +370,68 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#api_key%3AString-instance-method" class="signature"><strong>#api_key</strong> : String</a>
+        <a href="#effort%3AString%7CNil-instance-method" class="signature"><strong>#effort</strong> : String | Nil</a>
+        
+          <div class="summary"><p>Effort level for reasoning: &quot;high&quot;, &quot;medium&quot;, or &quot;low&quot; (OpenAI-style)</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#api_key%3D%28api_key%3AString%29-instance-method" class="signature"><strong>#api_key=</strong>(api_key : String)</a>
+        <a href="#effort%3D%28effort%3AString%7CNil%29-instance-method" class="signature"><strong>#effort=</strong>(effort : String | Nil)</a>
+        
+          <div class="summary"><p>Effort level for reasoning: &quot;high&quot;, &quot;medium&quot;, or &quot;low&quot; (OpenAI-style)</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#app_name%3AString%7CNil-instance-method" class="signature"><strong>#app_name</strong> : String | Nil</a>
+        <a href="#enabled%3ABool%7CNil-instance-method" class="signature"><strong>#enabled</strong> : Bool | Nil</a>
         
-          <div class="summary"><p>It tells OpenRouter which app is using the API see #app_url</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#app_name%3D%28app_name%3AString%7CNil%29-instance-method" class="signature"><strong>#app_name=</strong>(app_name : String | Nil)</a>
-        
-          <div class="summary"><p>It tells OpenRouter which app is using the API see #app_url</p></div>
+          <div class="summary"><p>Enable reasoning with default parameters (default: inferred from effort or max_tokens)</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#app_url%3AString%7CNil-instance-method" class="signature"><strong>#app_url</strong> : String | Nil</a>
+        <a href="#enabled%3D%28enabled%3ABool%7CNil%29-instance-method" class="signature"><strong>#enabled=</strong>(enabled : Bool | Nil)</a>
         
-          <div class="summary"><p>Together with #app_name it tells OpenRouter which app is using the API</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#app_url%3D%28app_url%3AString%7CNil%29-instance-method" class="signature"><strong>#app_url=</strong>(app_url : String | Nil)</a>
-        
-          <div class="summary"><p>Together with #app_name it tells OpenRouter which app is using the API</p></div>
+          <div class="summary"><p>Enable reasoning with default parameters (default: inferred from effort or max_tokens)</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#complete%28prompt%3AString%2Cmodel%3AString%29%3AResponse-instance-method" class="signature"><strong>#complete</strong>(prompt : String, model : String) : Response</a>
+        <a href="#exclude%3ABool-instance-method" class="signature"><strong>#exclude</strong> : Bool</a>
         
-          <div class="summary"><p>Send a completion request for a text prompt using the specified model</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#complete%28request%3ACompletionRequest%29%3AResponse-instance-method" class="signature"><strong>#complete</strong>(request : CompletionRequest) : Response</a>
-        
-          <div class="summary"><p>Send a completion request using the specified CompletionRequest object</p></div>
+          <div class="summary"><p>Whether to exclude reasoning tokens from response (default: false)</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#connect_timeout%3AFloat64-instance-method" class="signature"><strong>#connect_timeout</strong> : Float64</a>
+        <a href="#exclude%3D%28exclude%3ABool%29-instance-method" class="signature"><strong>#exclude=</strong>(exclude : Bool)</a>
         
-          <div class="summary"><p>Connection timeout in seconds (default: 60.0)</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#connect_timeout%3D%28connect_timeout%3AFloat64%29-instance-method" class="signature"><strong>#connect_timeout=</strong>(connect_timeout : Float64)</a>
-        
-          <div class="summary"><p>Connection timeout in seconds (default: 60.0)</p></div>
+          <div class="summary"><p>Whether to exclude reasoning tokens from response (default: false)</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get%28endpoint%3AString%29%3AJSON%3A%3AAny-instance-method" class="signature"><strong>#get</strong>(endpoint : String) : JSON::Any</a>
+        <a href="#max_tokens%3AInt32%7CNil-instance-method" class="signature"><strong>#max_tokens</strong> : Int32 | Nil</a>
         
-          <div class="summary"><p>Get a specific endpoint</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#get_models%3AArray%28Model%29-instance-method" class="signature"><strong>#get_models</strong> : Array(Model)</a>
-        
-          <div class="summary"><p>Returns an array of Model structs representing the available models currently supported by OpenRouter</p></div>
+          <div class="summary"><p>Specific token limit for reasoning (Anthropic-style)</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#post%28endpoint%3AString%2Cbody%3AString%7CNil%29%3AJSON%3A%3AAny-instance-method" class="signature"><strong>#post</strong>(endpoint : String, body : String | Nil) : JSON::Any</a>
+        <a href="#max_tokens%3D%28max_tokens%3AInt32%7CNil%29-instance-method" class="signature"><strong>#max_tokens=</strong>(max_tokens : Int32 | Nil)</a>
         
-          <div class="summary"><p>Post to a specific endpoint</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#read_timeout%3AFloat64-instance-method" class="signature"><strong>#read_timeout</strong> : Float64</a>
-        
-          <div class="summary"><p>Read timeout in seconds (default: 60.0)</p></div>
+          <div class="summary"><p>Specific token limit for reasoning (Anthropic-style)</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#read_timeout%3D%28read_timeout%3AFloat64%29-instance-method" class="signature"><strong>#read_timeout=</strong>(read_timeout : Float64)</a>
+        <a href="#to_json%28io%3AIO%29-instance-method" class="signature"><strong>#to_json</strong>(io : IO)</a>
         
-          <div class="summary"><p>Read timeout in seconds (default: 60.0)</p></div>
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
         
       </li>
     
@@ -449,6 +440,19 @@
 
 
   <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
     
       
 
@@ -488,21 +492,13 @@
     Constructor Detail
   </h2>
   
-    <div class="entry-detail" id="new(api_key:String,app_name:String|Nil=nil,app_url:String|Nil=nil,connect_timeout:Float64=60.0,read_timeout:Float64=60.0)-class-method">
+    <div class="entry-detail" id="new(effort:String|Nil=nil,max_tokens:Int32|Nil=nil,exclude:Bool=false,enabled:Bool|Nil=nil)-class-method">
       <div class="signature">
         
-        def self.<strong>new</strong>(api_key : String, app_name : String | Nil = <span class="n">nil</span>, app_url : String | Nil = <span class="n">nil</span>, connect_timeout : Float64 = <span class="n">60.0</span>, read_timeout : Float64 = <span class="n">60.0</span>)
+        def self.<strong>new</strong>(effort : String | Nil = <span class="n">nil</span>, max_tokens : Int32 | Nil = <span class="n">nil</span>, exclude : Bool = <span class="n">false</span>, enabled : Bool | Nil = <span class="n">nil</span>)
 
-        <a class="method-permalink" href="#new%28api_key%3AString%2Capp_name%3AString%7CNil%3Dnil%2Capp_url%3AString%7CNil%3Dnil%2Cconnect_timeout%3AFloat64%3D60.0%2Cread_timeout%3AFloat64%3D60.0%29-class-method">#</a>
+        <a class="method-permalink" href="#new%28effort%3AString%7CNil%3Dnil%2Cmax_tokens%3AInt32%7CNil%3Dnil%2Cexclude%3ABool%3Dfalse%2Cenabled%3ABool%7CNil%3Dnil%29-class-method">#</a>
       </div>
-      
-        <div class="doc">
-          
-          <p>Initialize a new OpenRouter::Client</p>
-<p>The <em>api_key</em> is generally required to use the API (though an invalid key seems to allow querying for models.)
-<em>app_name</em> and <em>app_url</em> are optional and tell OpenRouter about your application.
-<em>connect_timeout</em> and <em>read_timeout</em> are timeout values in seconds (default: 60.0).</p>
-        </div>
       
       <br/>
       <div>
@@ -513,6 +509,111 @@
 
 
   
+  <h2>
+    <a id="class-method-detail" class="anchor" href="#class-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Class Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="enabled(exclude:Bool=false)-class-method">
+      <div class="signature">
+        
+        def self.<strong>enabled</strong>(exclude : Bool = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#enabled%28exclude%3ABool%3Dfalse%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a reasoning config with default parameters</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="high(exclude:Bool=false)-class-method">
+      <div class="signature">
+        
+        def self.<strong>high</strong>(exclude : Bool = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#high%28exclude%3ABool%3Dfalse%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a reasoning config with high effort</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="low(exclude:Bool=false)-class-method">
+      <div class="signature">
+        
+        def self.<strong>low</strong>(exclude : Bool = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#low%28exclude%3ABool%3Dfalse%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a reasoning config with low effort</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="medium(exclude:Bool=false)-class-method">
+      <div class="signature">
+        
+        def self.<strong>medium</strong>(exclude : Bool = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#medium%28exclude%3ABool%3Dfalse%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a reasoning config with medium effort</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="with_max_tokens(max_tokens:Int32,exclude:Bool=false)-class-method">
+      <div class="signature">
+        
+        def self.<strong>with_max_tokens</strong>(max_tokens : Int32, exclude : Bool = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#with_max_tokens%28max_tokens%3AInt32%2Cexclude%3ABool%3Dfalse%29-class-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create a reasoning config with specific max tokens</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
 
   
 
@@ -526,46 +627,17 @@
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="api_key:String-instance-method">
+    <div class="entry-detail" id="effort:String|Nil-instance-method">
       <div class="signature">
         
-        def <strong>api_key</strong> : String
+        def <strong>effort</strong> : String | Nil
 
-        <a class="method-permalink" href="#api_key%3AString-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="api_key=(api_key:String)-instance-method">
-      <div class="signature">
-        
-        def <strong>api_key=</strong>(api_key : String)
-
-        <a class="method-permalink" href="#api_key%3D%28api_key%3AString%29-instance-method">#</a>
-      </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="app_name:String|Nil-instance-method">
-      <div class="signature">
-        
-        def <strong>app_name</strong> : String | Nil
-
-        <a class="method-permalink" href="#app_name%3AString%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#effort%3AString%7CNil-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>It tells OpenRouter which app is using the API
-see #app_url</p>
+          <p>Effort level for reasoning: &quot;high&quot;, &quot;medium&quot;, or &quot;low&quot; (OpenAI-style)</p>
         </div>
       
       <br/>
@@ -574,18 +646,17 @@ see #app_url</p>
       </div>
     </div>
   
-    <div class="entry-detail" id="app_name=(app_name:String|Nil)-instance-method">
+    <div class="entry-detail" id="effort=(effort:String|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>app_name=</strong>(app_name : String | Nil)
+        def <strong>effort=</strong>(effort : String | Nil)
 
-        <a class="method-permalink" href="#app_name%3D%28app_name%3AString%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#effort%3D%28effort%3AString%7CNil%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>It tells OpenRouter which app is using the API
-see #app_url</p>
+          <p>Effort level for reasoning: &quot;high&quot;, &quot;medium&quot;, or &quot;low&quot; (OpenAI-style)</p>
         </div>
       
       <br/>
@@ -594,17 +665,17 @@ see #app_url</p>
       </div>
     </div>
   
-    <div class="entry-detail" id="app_url:String|Nil-instance-method">
+    <div class="entry-detail" id="enabled:Bool|Nil-instance-method">
       <div class="signature">
         
-        def <strong>app_url</strong> : String | Nil
+        def <strong>enabled</strong> : Bool | Nil
 
-        <a class="method-permalink" href="#app_url%3AString%7CNil-instance-method">#</a>
+        <a class="method-permalink" href="#enabled%3ABool%7CNil-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>Together with #app_name it tells OpenRouter which app is using the API</p>
+          <p>Enable reasoning with default parameters (default: inferred from effort or max_tokens)</p>
         </div>
       
       <br/>
@@ -613,17 +684,17 @@ see #app_url</p>
       </div>
     </div>
   
-    <div class="entry-detail" id="app_url=(app_url:String|Nil)-instance-method">
+    <div class="entry-detail" id="enabled=(enabled:Bool|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>app_url=</strong>(app_url : String | Nil)
+        def <strong>enabled=</strong>(enabled : Bool | Nil)
 
-        <a class="method-permalink" href="#app_url%3D%28app_url%3AString%7CNil%29-instance-method">#</a>
+        <a class="method-permalink" href="#enabled%3D%28enabled%3ABool%7CNil%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>Together with #app_name it tells OpenRouter which app is using the API</p>
+          <p>Enable reasoning with default parameters (default: inferred from effort or max_tokens)</p>
         </div>
       
       <br/>
@@ -632,17 +703,17 @@ see #app_url</p>
       </div>
     </div>
   
-    <div class="entry-detail" id="complete(prompt:String,model:String):Response-instance-method">
+    <div class="entry-detail" id="exclude:Bool-instance-method">
       <div class="signature">
         
-        def <strong>complete</strong>(prompt : String, model : String) : <a href="../OpenRouter/Response.html">Response</a>
+        def <strong>exclude</strong> : Bool
 
-        <a class="method-permalink" href="#complete%28prompt%3AString%2Cmodel%3AString%29%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#exclude%3ABool-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>Send a completion request for a text prompt using the specified model</p>
+          <p>Whether to exclude reasoning tokens from response (default: false)</p>
         </div>
       
       <br/>
@@ -651,17 +722,17 @@ see #app_url</p>
       </div>
     </div>
   
-    <div class="entry-detail" id="complete(request:CompletionRequest):Response-instance-method">
+    <div class="entry-detail" id="exclude=(exclude:Bool)-instance-method">
       <div class="signature">
         
-        def <strong>complete</strong>(request : <a href="../OpenRouter/CompletionRequest.html">CompletionRequest</a>) : <a href="../OpenRouter/Response.html">Response</a>
+        def <strong>exclude=</strong>(exclude : Bool)
 
-        <a class="method-permalink" href="#complete%28request%3ACompletionRequest%29%3AResponse-instance-method">#</a>
+        <a class="method-permalink" href="#exclude%3D%28exclude%3ABool%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>Send a completion request using the specified CompletionRequest object</p>
+          <p>Whether to exclude reasoning tokens from response (default: false)</p>
         </div>
       
       <br/>
@@ -670,17 +741,17 @@ see #app_url</p>
       </div>
     </div>
   
-    <div class="entry-detail" id="connect_timeout:Float64-instance-method">
+    <div class="entry-detail" id="max_tokens:Int32|Nil-instance-method">
       <div class="signature">
         
-        def <strong>connect_timeout</strong> : Float64
+        def <strong>max_tokens</strong> : Int32 | Nil
 
-        <a class="method-permalink" href="#connect_timeout%3AFloat64-instance-method">#</a>
+        <a class="method-permalink" href="#max_tokens%3AInt32%7CNil-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>Connection timeout in seconds (default: 60.0)</p>
+          <p>Specific token limit for reasoning (Anthropic-style)</p>
         </div>
       
       <br/>
@@ -689,17 +760,17 @@ see #app_url</p>
       </div>
     </div>
   
-    <div class="entry-detail" id="connect_timeout=(connect_timeout:Float64)-instance-method">
+    <div class="entry-detail" id="max_tokens=(max_tokens:Int32|Nil)-instance-method">
       <div class="signature">
         
-        def <strong>connect_timeout=</strong>(connect_timeout : Float64)
+        def <strong>max_tokens=</strong>(max_tokens : Int32 | Nil)
 
-        <a class="method-permalink" href="#connect_timeout%3D%28connect_timeout%3AFloat64%29-instance-method">#</a>
+        <a class="method-permalink" href="#max_tokens%3D%28max_tokens%3AInt32%7CNil%29-instance-method">#</a>
       </div>
       
         <div class="doc">
           
-          <p>Connection timeout in seconds (default: 60.0)</p>
+          <p>Specific token limit for reasoning (Anthropic-style)</p>
         </div>
       
       <br/>
@@ -708,19 +779,13 @@ see #app_url</p>
       </div>
     </div>
   
-    <div class="entry-detail" id="get(endpoint:String):JSON::Any-instance-method">
+    <div class="entry-detail" id="to_json(io:IO)-instance-method">
       <div class="signature">
         
-        def <strong>get</strong>(endpoint : String) : JSON::Any
+        def <strong>to_json</strong>(io : IO)
 
-        <a class="method-permalink" href="#get%28endpoint%3AString%29%3AJSON%3A%3AAny-instance-method">#</a>
+        <a class="method-permalink" href="#to_json%28io%3AIO%29-instance-method">#</a>
       </div>
-      
-        <div class="doc">
-          
-          <p>Get a specific endpoint</p>
-<p>This is a low-level method that is available for edge cases.</p>
-        </div>
       
       <br/>
       <div>
@@ -728,76 +793,13 @@ see #app_url</p>
       </div>
     </div>
   
-    <div class="entry-detail" id="get_models:Array(Model)-instance-method">
+    <div class="entry-detail" id="to_json(json:JSON::Builder)-instance-method">
       <div class="signature">
         
-        def <strong>get_models</strong> : Array(<a href="../OpenRouter/Model.html">Model</a>)
+        def <strong>to_json</strong>(json : JSON::Builder)
 
-        <a class="method-permalink" href="#get_models%3AArray%28Model%29-instance-method">#</a>
+        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
       </div>
-      
-        <div class="doc">
-          
-          <p>Returns an array of Model structs representing the available models currently supported by OpenRouter</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="post(endpoint:String,body:String|Nil):JSON::Any-instance-method">
-      <div class="signature">
-        
-        def <strong>post</strong>(endpoint : String, body : String | Nil) : JSON::Any
-
-        <a class="method-permalink" href="#post%28endpoint%3AString%2Cbody%3AString%7CNil%29%3AJSON%3A%3AAny-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Post to a specific endpoint</p>
-<p>This is a low-level method that is available for edge cases.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="read_timeout:Float64-instance-method">
-      <div class="signature">
-        
-        def <strong>read_timeout</strong> : Float64
-
-        <a class="method-permalink" href="#read_timeout%3AFloat64-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Read timeout in seconds (default: 60.0)</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="read_timeout=(read_timeout:Float64)-instance-method">
-      <div class="signature">
-        
-        def <strong>read_timeout=</strong>(read_timeout : Float64)
-
-        <a class="method-permalink" href="#read_timeout%3D%28read_timeout%3AFloat64%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Read timeout in seconds (default: 60.0)</p>
-        </div>
       
       <br/>
       <div>
